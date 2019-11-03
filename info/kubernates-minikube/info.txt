@@ -1,0 +1,32 @@
+############# launch
+minikube version
+
+#start
+minikube start --wait=false
+
+#test start
+kubectl cluster-info
+
+#view nodes
+kubectl get nodes
+
+# create pods
+kubectl create deployment first-deployment --image=katacoda/docker-http-server
+
+# view pods
+kubectl get pods
+
+# start pod
+kubectl expose deployment first-deployment --port=80 --type=NodePort
+
+# enable dashboard
+minikube addons enable dashboard
+
+# apply with yaml
+kubectl apply -f /opt/kubernetes-dashboard.yaml
+
+#monitoring pods status
+kubectl get pods -n kube-system  -w
+
+############# kubeadm
+kubeadm init --token=102952.1a7dd4cc8d1f4cc5 --kubernetes-version $(kubeadm version -o short)
