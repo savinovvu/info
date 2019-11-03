@@ -13,3 +13,7 @@ kubectl create -f service.yaml
 kubectl get svc
 kubectl describe svc webapp1-svc
 
+
+#gets urls
+minikube service  webapp1-svc
+
