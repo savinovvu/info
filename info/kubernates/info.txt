@@ -12,6 +12,22 @@ kubectl get pods
 # services
 kubectl get services
 
+#all
+kubectl get all
+
+#watch with namespace
+watch kubectl get deployments,pods,services --namespace=logs
+
+# extends info
+kubectl get pods -o wide
+
+# namespaces
+kubectl get namespaces
+
+# CPU, MEMORY
+kubectl top node
+kubectl top pod
+
 
 ############################## LAUNCH
 
@@ -67,3 +83,10 @@ kubectl get svc
 kubectl delete pod pod-name
 
 
+############################ NAMESPACES
+
+kubectl create ns testns
+
+
+###################### EDIT
+kubectl edit deployment examplehttpapp
