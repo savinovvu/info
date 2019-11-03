@@ -63,4 +63,7 @@ kubectl get svc
 
 
 
+########################### DELETE
+kubectl delete pod pod-name
+
 
