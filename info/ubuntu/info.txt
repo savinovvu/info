@@ -1,0 +1,9 @@
+# process by port with net-tools (sudo apt install net-tools)
+
+sudo netstat -ltnp
+
+sudo netstat -ltnp | grep -w ':80'
+
+
+# kill by PID
+sudo kill 14530
