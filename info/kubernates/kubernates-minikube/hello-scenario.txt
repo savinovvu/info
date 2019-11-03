@@ -1,0 +1,5 @@
+kubectl run hw --image=karthequian/helloworld --port=80
+kubectl get deployments # should be available 1
+kubectl expose deployment hw --type=NodePort
+kubectl get services
+minikube service hw
