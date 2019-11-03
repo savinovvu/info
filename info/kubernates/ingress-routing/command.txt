@@ -1,0 +1,6 @@
+kubectl apply -f deployment.yaml
+kubectl create -f ingress.yaml
+kubectl create -f ingress-rules.yaml
+
+
+kubectl get ing

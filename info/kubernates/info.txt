@@ -61,7 +61,6 @@ kubeadm token list
 ########################### NETWORK INFO
 kubectl get svc
 
-########################## SCALLE
 
 
 
