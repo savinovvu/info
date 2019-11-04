@@ -1,0 +1,11 @@
+ microk8s.kubectl get node
+
+#attention command
+ snap alias microk8s.kubectl kubectl
+
+ microk8s.enable dns dashboard
+
+
+ microk8s.kubectl get all --all-namespaces
+
+ microk8s.kubectl run nginx --image nginx:alpine --replicas 3
