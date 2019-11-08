@@ -1,0 +1,17 @@
+kubectl run wordpress --image=wordpress:5.2.2-php7.1-apache --port=8888 --generator=run/v1
+
+kubectl get pods
+
+kubectl describe pods
+
+kubectl port-forward wordpress-name-pod 8888:80
+
+kubectl run mysql --image=mysql:5.6 --port=3306 --generator=run/v1 --env=MYSQL_ROOT_PASSWORD=root
+
+kubectl exec -ti mysql-name-pod bash
+
+mysql -u root -p
+
+create database wordpress;
+
+# get database ip from [ kubectl describe pod mysql-pod-name
