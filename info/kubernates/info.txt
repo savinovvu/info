@@ -28,6 +28,11 @@ kubectl get namespaces
 kubectl top node
 kubectl top pod
 
+#cluster info
+kubectl cluster-info dump
+kubectl config view
+
+kubectl config get-contexts
 
 ############################## LAUNCH
 
@@ -90,3 +95,14 @@ kubectl create ns testns
 
 ###################### EDIT
 kubectl edit deployment examplehttpapp
+
+
+###################### CONFIG
+
+#add base auth
+export KUBECONFIG=~/.kube/config:~/.kube/config-static-admin
+
+kubectl config get-contexts
+
+#
+kubectl config use-context minikube-static
