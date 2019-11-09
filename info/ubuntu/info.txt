@@ -7,3 +7,8 @@ sudo netstat -ltnp | grep -w ':80'
 
 # kill by PID
 sudo kill 14530
+
+
+#search process
+lsof | grep nginx
+systemctl | grep nginx
