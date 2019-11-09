@@ -11,6 +11,9 @@ http{
         server_name 127.0.0.1;
         root /usr/share/nginx/html/sites/demo;
 
+
+
+
         # ?apikey=1234
         if ( $arg_apikey != 1234 ){
             return 401 "Incorrect api Key";
@@ -47,6 +50,16 @@ http{
             return 200 "Name: $arg_name";
         }
 
+
+        set $weekend 'No';
+
+        if ( $date_local ~ 'Saturday|Sunday') {
+            set $weekend 'Yes';
+        }
+
+        location /is_weekend {
+            return 200 $weekend ;
+        }
 
 
     }
