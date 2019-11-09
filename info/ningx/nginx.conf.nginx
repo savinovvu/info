@@ -11,6 +11,11 @@ http{
         server_name 127.0.0.1;
         root /usr/share/nginx/html/sites/demo;
 
+        # ?apikey=1234
+        if ( $arg_apikey != 1234 ){
+            return 401 "Incorrect api Key";
+        }
+
 
         location = /greet {
             return 200 'Hello fron NGINX "/greet" EXACT MATCH.';
@@ -32,6 +37,17 @@ http{
         location ~* /casegreet[0-9] {
             return 200 'Hello fron NGINX "/greet" REGEX MATCH INSENSITIVE.';
         }
+
+
+        location /inspect {
+            return 200 "$host\n$uri\n$args";
+        }
+
+        location /inspect-name {
+            return 200 "Name: $arg_name";
+        }
+
+
 
     }
 
