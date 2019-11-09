@@ -10,11 +10,34 @@ http{
 
     include mime.types;
 
-    server {
+
+
+    #Redirect all traffic to HTTPS
+    server{
         listen 80;
+        server_name 127.0.0.1;
+        return 301 https://$host$request_uri;
+    }
+
+
+    server {
+        listen 443 ssl http2;
         server_name 127.0.0.1;
         root /usr/share/nginx/html/sites/demo;
 
+        index index.html;
+
+        ssl_certificate path;
+        ssl_certificate_key path;
+
+        #Disable SSL
+        ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+
+        #Optimise cipher suits
+        ssl_prefer_server_ciphers on;
+        ssl_ciphers AES128-SHA:AES256-SHA:RC4-SHA:DES-CBC3-SHA:RC4-MD5;
+
+        # Enable DH Params
 
 
 
