@@ -1,0 +1,40 @@
+events{
+}
+
+
+http{
+
+    include mime.types;
+
+    server {
+        listen 80;
+        server_name 127.0.0.1;
+        root /usr/share/nginx/html/sites/demo;
+
+
+        location = /greet {
+            return 200 'Hello fron NGINX "/greet" EXACT MATCH.';
+        }
+
+        #Preferential Prefix match
+        location ^~ /CaseGreet2{
+            return 200 'Hello fron NGINX "/greet" Preferences REGEX MATCH.';
+
+        }
+
+        #REGEX match - case sensitive
+        location ~ /greet[0-9] {
+            return 200 'Hello fron NGINX "/greet" REGEX MATCH.';
+        }
+
+
+        #REGEX match - case insensitive
+        location ~* /casegreet[0-9] {
+            return 200 'Hello fron NGINX "/greet" REGEX MATCH INSENSITIVE.';
+        }
+
+    }
+
+
+
+}

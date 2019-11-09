@@ -1,0 +1,28 @@
+#help
+nginx -h
+
+#stop
+sudo nginx -s stop
+systemctl stop nginx
+
+#start
+systemctl start nginx
+
+#restart
+systemctl restart nginx
+
+#status
+systemctl status nginx
+
+
+#test configuration
+sudo nginx -t
+
+systemctl reload nginx
+
+
+curl -I http://127.0.0.1
+
+
+
+
