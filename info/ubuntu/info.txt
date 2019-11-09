@@ -12,3 +12,4 @@ sudo kill 14530
 #search process
 lsof | grep nginx
 systemctl | grep nginx
+whereis nginx
