@@ -1,0 +1,34 @@
+worker_processes auto;
+
+events{
+#    ulimit -n
+    worker_connections 1024;
+}
+
+http{
+    include mime.types;
+
+    #Beffer size for POST submissions
+    client_body_buffer_size 10k ;
+    client_max_body_size 8m;
+
+
+    #Buffer size for Headers
+    client_header_buffer_size 1k;
+
+    #Max time to receive client headers/body
+    client_body_timeout 12;
+    client_header_timeout 12;
+
+    #Max time to keep a conneciton open
+    keepalive_timeout 15;
+
+    #Max time for the client accept/receiver a response
+    send_timeout 10;
+
+    #Skip buffering for static files
+    sendfile on;
+
+    # Optimise sendfile packets
+    tcp_nopush on;
+}

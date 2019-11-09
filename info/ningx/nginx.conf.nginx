@@ -1,4 +1,8 @@
+
+worker_processes 2;
+
 events{
+    worker_connections 1024;
 }
 
 
@@ -83,6 +87,12 @@ http{
 
         location /friendly_404{
             return 404 "Sorry, that file could not be found";
+        }
+        #override log file
+        location /override-secure {
+            access_log /var/log/nginx/secure.access.log;
+            #access_log off;
+            return 200 "Welcome to override log area";
         }
     }
 

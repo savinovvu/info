@@ -13,3 +13,11 @@ sudo kill 14530
 lsof | grep nginx
 systemctl | grep nginx
 whereis nginx
+
+
+#info cpu
+nroc
+lscpu
+
+# connections for process
+ulimit -n
