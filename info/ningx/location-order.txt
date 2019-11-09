@@ -1,0 +1,7 @@
+1. Exact Match               = uri
+
+2. Preferntial Prefix Match ^~ uri
+
+3. Regex Match              ~* uri
+
+4. Prefix Match                uri
