@@ -15,9 +15,9 @@ http{
 
 
         # ?apikey=1234
-        if ( $arg_apikey != 1234 ){
-            return 401 "Incorrect api Key";
-        }
+#        if ( $arg_apikey != 1234 ){
+#            return 401 "Incorrect api Key";
+#        }
 
 
         location = /greet {
@@ -53,6 +53,7 @@ http{
 
         set $weekend 'No';
 
+        # check if weekends
         if ( $date_local ~ 'Saturday|Sunday') {
             set $weekend 'Yes';
         }
@@ -61,6 +62,17 @@ http{
             return 200 $weekend ;
         }
 
+        #redirect
+        location /redirect {
+            return 307 /is_weekend;
+        }
+
+        # rewrite
+        rewrite ^/user/\w+ /foo;
+
+        location /foo {
+            return 200 "Hello user";
+        }
 
     }
 
