@@ -135,6 +135,13 @@ http{
             # 1M - mounth
         }
 
+
+        # http 2 push
+        location = /index.html {
+            http2_push /style.css;
+            http2_push /thymb.png;
+        }
+
     }
 
 
