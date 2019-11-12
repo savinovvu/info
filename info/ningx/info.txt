@@ -1,6 +1,9 @@
 #help
 nginx -h
 
+# see modules
+nginx -V
+
 #stop
 sudo nginx -s stop
 systemctl stop nginx
@@ -18,6 +21,7 @@ systemctl status nginx
 #test configuration
 sudo nginx -t
 
+#reload
 systemctl reload nginx
 
 

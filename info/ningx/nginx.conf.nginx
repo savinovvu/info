@@ -11,6 +11,11 @@ http{
     include mime.types;
 
 
+    gzip on;
+    gzip_comp_level 3;
+    gzip_types text/css ;
+    gzip_types text/javascript;
+
 
     #Redirect all traffic to HTTPS
     server{
@@ -27,8 +32,8 @@ http{
 
         index index.html;
 
-        ssl_certificate path;
-        ssl_certificate_key path;
+        ssl_certificate /etc/nginx/ssl/self.crt;
+        ssl_certificate_key /etc/nginx/ssl/self.key;
 
         #Disable SSL
         ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
@@ -117,6 +122,19 @@ http{
             #access_log off;
             return 200 "Welcome to override log area";
         }
+
+
+        location ~* \.(css|js|jpg|png)$ {
+            access_log off;
+            add_header Cache-Control public;
+            add_header Pragma public;
+            add_header Vary Accept-Encoding;
+            expires 60m;
+#            1m - minute
+#            1h - hour
+            # 1M - mounth
+        }
+
     }
 
 

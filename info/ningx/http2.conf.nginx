@@ -1,0 +1,60 @@
+
+worker_processes 2;
+
+events{
+    worker_connections 1024;
+}
+
+
+http{
+
+    include mime.types;
+
+
+    gzip on;
+    gzip_comp_level 3;
+    gzip_types text/css ;
+    gzip_types text/javascript;
+
+
+    #Redirect all traffic to HTTPS
+    server{
+        listen 80;
+        server_name 127.0.0.1;
+        return 301 https://$host$request_uri;
+    }
+
+
+    server {
+        listen 443 ssl http2;
+        server_name 127.0.0.1;
+        root /usr/share/nginx/html/sites/demo;
+
+        index index.html;
+
+        ssl_certificate /etc/nginx;
+        ssl_certificate_key path;
+
+        #Disable SSL
+        ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+
+        #Optimise cipher suits
+        ssl_prefer_server_ciphers on;
+        ssl_ciphers AES128-SHA:AES256-SHA:RC4-SHA:DES-CBC3-SHA:RC4-MD5;
+
+        # Enable DH Params
+
+
+
+        # ?apikey=1234
+        #        if ( $arg_apikey != 1234 ){
+        #            return 401 "Incorrect api Key";
+        #        }
+
+
+
+    }
+
+
+
+}
