@@ -1,0 +1,2 @@
+#see password
+cat /var/lib/jenkins/secrets/initialAdminPassword

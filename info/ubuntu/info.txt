@@ -4,6 +4,9 @@ sudo netstat -ltnp
 
 sudo netstat -ltnp | grep -w ':80'
 
+#see process PID by Port
+sudo ss -lptn 'sport = :80'
+
 
 # kill by PID
 sudo kill 14530
