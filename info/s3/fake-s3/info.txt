@@ -1,0 +1,3 @@
+
+# start
+fakes3 -r /mnt/fakes3_root -p 4567 --license YOUR_LICENSE_KEY
