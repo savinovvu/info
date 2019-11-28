@@ -4,3 +4,7 @@ docker ps -a
 
 #remove all containers
 docker rm -f $(docker ps -a -q)
+
+# into container
+docker exec -ti container-name bash
+docker exec -ti container-name sh
