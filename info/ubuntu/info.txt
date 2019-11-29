@@ -28,3 +28,6 @@ ulimit -n
 
 # memory
 free -m
+
+# see mount directory
+df -h
