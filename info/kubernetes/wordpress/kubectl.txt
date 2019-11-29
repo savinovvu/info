@@ -1,0 +1,12 @@
+
+#see info
+kubectl top node
+kubectl top pod
+
+#edit, (not infrastructure as a code)
+kubectl edit ...
+
+#logs from pods
+kubectl logs ...
+kubectl logs --all-containers=true --follow -tail=10
+             -- previos # for dead container
