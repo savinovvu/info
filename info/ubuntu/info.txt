@@ -24,3 +24,7 @@ lscpu
 
 # connections for process
 ulimit -n
+
+
+# memory
+free -m
