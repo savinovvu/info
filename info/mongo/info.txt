@@ -1,0 +1,15 @@
+#start
+ sudo systemctl start mongodb
+
+#restart
+ sudo systemctl restart mongodb
+
+
+# turn off autostart
+
+ sudo systemctl disable mongodb
+
+
+# turn on autostart
+
+ sudo systemctl enable mongodb
