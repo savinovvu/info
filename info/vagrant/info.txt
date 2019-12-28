@@ -1,0 +1,13 @@
+
+#init Vagrantfile
+vagrant init xxxx
+
+vagrant up
+
+vagrant ssh
+
+#stop the virtual machine
+vagrant halt
+
+# destroy all resources
+vagrant destroy
