@@ -12,3 +12,6 @@ docker exec -ti container-name sh
 
 # infor container
 docker inspect container name
+
+# create new image from existing container
+docker commit container_id new_image_name
