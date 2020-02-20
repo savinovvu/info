@@ -1,5 +1,5 @@
 #see all containers
 docker ps -a
 
-# infor container
+# info container
 docker inspect container name

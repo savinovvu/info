@@ -1,5 +1,11 @@
 # inspect with container-name
-
 docker inspect container-name
 docker inspect -f "{{json .Config.Labels }}" container-name
 docker ps --filter "label=user=scrapbook"
+
+
+# get file setings in container
+docker exec nginx cat /etc/nginx/conf.d/default.conf
+
+# inspect log config
+docker inspect --format '{{ .HostConfig.LogConfig }}' redis-server

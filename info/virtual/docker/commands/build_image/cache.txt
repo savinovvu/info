@@ -1,0 +1,2 @@
+#without cache
+docker build -t germes/mysql -f mysql.dockerfile --no-cache=true
