@@ -1,0 +1,5 @@
+# inspect with container-name
+
+docker inspect container-name
+docker inspect -f "{{json .Config.Labels }}" container-name
+docker ps --filter "label=user=scrapbook"

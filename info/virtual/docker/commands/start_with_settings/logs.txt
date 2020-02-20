@@ -1,0 +1,16 @@
+docker logs redis-server
+
+# start with syslog driver
+docker run -d --name redis-syslog --log-driver=syslog redis
+
+# start without logs
+docker run -d --name redis-syslog --log-driver=syslog redis
+
+# inspect log config
+docker inspect --format '{{ .HostConfig.LogConfig }}' redis-server
+
+
+################### FORMATTING OUTPUT
+docker ps --format '{{.Names}} container is using {{.Image}} image'
+docker ps --format 'table {{.Names}}\t{{.Image}}'
+docker ps -q | xargs docker inspect --format '{{ .Id }} - {{ .Name }} - {{ .NetworkSettings.IPAddress }}'

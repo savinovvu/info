@@ -1,0 +1,9 @@
+#copy files:
+docker cp config.conf dataContainer:/config/
+
+# copy files from another container - ubuntu to dataContainer
+docker run --volumes-from dataContainer ubuntu ls /config
+
+# move data container to another machine
+docker export dataContainer > dataContainer.tar
+docker import dataContainer.tar

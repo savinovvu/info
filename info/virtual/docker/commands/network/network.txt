@@ -1,0 +1,16 @@
+# create network
+docker network create network-name
+
+# connect to network
+docker network connect frontend-network redis
+docker run -d --name=redis --net=network-name redis
+
+# see path variables and hosts and networks
+docker run --net=network-name alpine env
+docker run --net=network-name alpine cat /etc/hosts
+docker run --net=network-name alpine cat /etc/resolv.conf
+
+# inspect network
+docker network inspect frontend-network
+# disconnect container
+docker network disconnect frontend-network redis
