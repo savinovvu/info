@@ -1,0 +1,8 @@
+-t name image
+-f path to dockerfile
+
+examples:
+
+docker build -t germes/mysql -f src/main/resources/docker/mysql.dockerfile .
+
+docker build -t germes/admin -f src/main/resources/docker/admin.dockerfile .

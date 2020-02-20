@@ -1,4 +1,4 @@
-
+docker logs container_name
 
 ################### FORMATTING OUTPUT
 docker ps --format '{{.Names}} container is using {{.Image}} image'
