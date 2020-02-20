@@ -3,3 +3,6 @@ docker ps -a
 
 # info container
 docker inspect container name
+
+# info about images
+docker images
