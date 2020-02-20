@@ -31,3 +31,6 @@ free -m
 
 # see mount directory
 df -h
+
+# see started processed
+ps aux

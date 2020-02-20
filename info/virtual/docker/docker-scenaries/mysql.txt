@@ -1,0 +1,4 @@
+# start with password pwd
+docker run –e MYSQL_ROOT_PASSWORD=pwd mysql
+
+# into mysql
