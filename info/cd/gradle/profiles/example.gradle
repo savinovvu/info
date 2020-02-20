@@ -1,0 +1,5 @@
+project.hasProperty('glassfish')
+
+war {
+    classpath = classpath.filter { !project.hasProperty('glassfish') || !it.name.contains('jersey') }
+}
