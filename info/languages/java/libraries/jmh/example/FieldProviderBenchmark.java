@@ -1,9 +1,5 @@
 package org.itsimulator.germes.app.service.benchmark;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.concurrent.TimeUnit;
-
 import org.itsimulator.germes.app.model.entity.geography.City;
 import org.itsimulator.germes.app.service.transform.impl.CachedFieldProvider;
 import org.itsimulator.germes.app.service.transform.impl.FieldProvider;
@@ -22,6 +18,10 @@ import org.openjdk.jmh.results.format.ResultFormatType;
 import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Class with JMH benchmarks for FieldProvider class

@@ -1,9 +1,9 @@
 package org.itsimulator.germes.app.service.benchmark;
 
-import java.util.Set;
-
 import org.itsimulator.germes.app.model.entity.base.AbstractEntity;
 import org.itsimulator.germes.app.model.entity.geography.Station;
+
+import java.util.Set;
 
 public class CityCopy extends AbstractEntity {
 	private String name;
