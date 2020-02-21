@@ -1,0 +1,1 @@
+ -Djunit.jupiter.extensions.autodetection.enabled=true
