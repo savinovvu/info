@@ -1,0 +1,13 @@
+<dependency>
+                     <groupId>org.testcontainers</groupId>
+                     <artifactId>mysql</artifactId>
+                     <version>${testcontainers.version}</version>
+                     <scope>test</scope>
+                 </dependency>
+
+
+ testCompile "org.testcontainers:postgresql:1.12.5"
+
+# database and passord: test
+ @ClassRule
+        private static MySQLContainer<?> mysql = new MySQLContainer<>();
