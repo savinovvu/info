@@ -1,0 +1,11 @@
+# check settings
+docker-compose config
+
+# stop docker compose
+docker-compose down
+
+# background flask -d
+docker-compose up -d
+
+#logs from all containers
+docker-compose logs

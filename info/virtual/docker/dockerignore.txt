@@ -1,3 +1,5 @@
+# for local build
+
 .git
 
 .settings
@@ -5,3 +7,27 @@
 .idea
 
 src-*/*
+
+# for build in docker container
+
+**/target
+
+**/build
+
+**/bin
+
+**/node_modules
+
+*.text
+
+.gradle
+
+.git
+
+.settings
+
+**/*.project
+
+**/*.log
+
+**/*.bat

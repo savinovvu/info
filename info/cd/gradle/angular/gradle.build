@@ -1,0 +1,19 @@
+
+# this plugin download and install nodejs/npm, if not exist
+plugins {
+  id "com.moowork.node" version "1.2.0"
+}
+
+apply plugin:"com.moowork.node"
+
+
+node {
+  nodeModulesDir = file("client")
+}
+
+# add angular test
+task testAngular(type:NpmTask) {
+    args = ['run','testExit'];
+}
+
+test.dependsOn 'testAngular'

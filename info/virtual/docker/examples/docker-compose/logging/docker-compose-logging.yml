@@ -1,0 +1,52 @@
+version: '3.4'
+services:
+  mongo:
+    image: mongo:3
+    networks:
+      - network1
+      - network2      
+    volumes:
+      - mongo_data:/data/db
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:5.6.9
+    environment:
+      - http.host=0.0.0.0
+      - xpack.security.enabled=false
+      - "ES_JAVA_OPTS=-Xms768m -Xmx768m"
+    networks:
+      - network1
+      - network2                
+  graylog:
+    build: 
+      context: germes-admin
+      dockerfile: src/main/resources/docker/graylog.dockerfile
+    environment:
+      - GRAYLOG_WEB_ENDPOINT_URI=http://127.0.0.1:9001/api
+    ports:
+      - 9001:9000
+      - 12201:12201
+      - 12201:12201/udp
+    depends_on:
+      - mongo      
+      - elasticsearch      
+    networks:
+      - network1          
+      - network2      
+  admin:
+    environment:
+      - JAVA_OPTS=-Dlog4j.configurationFile=log4j2-prod.xml
+    depends_on:
+      - mysql      
+      - graylog      
+  client:
+    environment:
+      - JAVA_OPTS=-Dlog4j.configurationFile=log4j2-prod.xml
+    depends_on:
+      - mysql      
+      - graylog             
+networks:
+  network2:
+    driver: bridge
+volumes:
+  mongo_data:
+    driver: local          
