@@ -12,8 +12,14 @@
 
 --name container name
 
+-w сделать папку рабочей по умолчанию
+
 examples:
 
 docker run -it -e MYSQL_ROOT_PASSWORD=secret_pw -p 3307:3306 --name=germes_db --memory=512M --cpus=1 c:/data:/var/lib/mysql germes/mysql
 
 docker run -it -v d:/Project/target:/var/lib/jetty/webapps -p 8080:8080 --name=admin --link mysql:mysql jetty
+
+docker run -it --rm -v "d:\Project":/opt/maven -w /opt/maven maven:3-jdk-9-slim mvn clean install
+
+docker run -it --rm -v "d:\Project":/home/gradle/project -w /home/gradle/project gradle:4.4-jdk9 gradle clean insta

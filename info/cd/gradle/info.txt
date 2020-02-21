@@ -1,2 +1,7 @@
 #see gradle projects
 gradle :projects
+
+
+#start build from docker
+# d:\Project - path to our project
+docker run -it --rm -v "d:\Project":/opt/maven -w /opt/maven maven:3-jdk-9-slim mvn clean install
