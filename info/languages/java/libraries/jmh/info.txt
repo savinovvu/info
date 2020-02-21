@@ -1,0 +1,3 @@
+# to start: in target or build folder
+java -jar benchmarks.jar
+

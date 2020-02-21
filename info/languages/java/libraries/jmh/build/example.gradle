@@ -1,0 +1,15 @@
+plugins {
+    id "me.champeau.gradle.jmh" version "0.4.5"
+}
+
+apply plugin: 'me.champeau.gradle.jmh'
+
+jmh {
+    jvmArgs = '-Dfile.encoding=UTF-8'
+}
+// dependencies not required if you use plugin
+ compile("org.openjdk.jmh:jmh-core:${jmhVersion}")
+ compile("org.openjdk.jmh:jmh-generator-annprocess:${jmhVersion}")
+
+// get jmh dependency for gradle, example
+jmh 'io.github.lukehutch:fast-classpath-scanner:2.9.3'
