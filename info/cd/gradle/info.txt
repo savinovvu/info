@@ -5,3 +5,7 @@ gradle :projects
 #start build from docker
 # d:\Project - path to our project
 docker run -it --rm -v "d:\Project":/home/gradle/project -w /home/gradle/project gradle:4.4-jdk9 gradle clean install
+
+
+# dependencies tree
+gradle dependencies

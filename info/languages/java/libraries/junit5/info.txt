@@ -45,3 +45,14 @@ public class CityTest {
                Optional<City> foundCity = service.findCityById(incorrectId);
                assertTrue(!foundCity.isPresent());
         }
+
+      Or
+
+ @ParameterizedTest
+        @MethodSource(methodName)
+        public void findCityById_incorrectId_returnsEmptyOptional(int arg1, String arg2) {
+               Optional<City> foundCity = service.findCityById(incorrectId);
+               assertTrue(!foundCity.isPresent());
+        }
+
+      public static Stream<Arguments> methodName(){}
