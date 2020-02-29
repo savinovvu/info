@@ -12,3 +12,9 @@ docker-compose logs
 
 #restart container
 docker-compose restart container-name
+
+#bash with ports
+docker-compose run --service-ports web /bin/bash
+
+@bash without ports
+docker-compose run web bash

@@ -1,0 +1,5 @@
+#connect
+psql DBNAME USERNAME
+
+#with password
+PGPASSWORD=[your password] psql -Umyuser < myscript.sql

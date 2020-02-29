@@ -34,3 +34,6 @@ df -h
 
 # see started processed
 ps aux
+
+# set ttl
+sudo iptables -t mangle -A POSTROUTING -j TTL --ttl-set 65

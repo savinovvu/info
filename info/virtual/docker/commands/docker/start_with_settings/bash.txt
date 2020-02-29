@@ -1,0 +1,3 @@
+# docker run  -it  --entrypoint /bin/sh node-tmp
+docker run  -it  --entrypoint /bin/sh container-image-name
+
