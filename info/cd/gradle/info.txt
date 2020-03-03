@@ -9,3 +9,6 @@ docker run -it --rm -v "d:\Project":/home/gradle/project -w /home/gradle/project
 
 # dependencies tree
 gradle dependencies
+
+# skip tests
+gradle build -x test
