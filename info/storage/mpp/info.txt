@@ -1,2 +1,5 @@
-for example:
+local:
 vertica, greenplum, teradata, kude, clickhouse
+
+cloud:
+BigQuery (GCP), Redshift (Amazon), SQL DATA Warehouse(Azure)
