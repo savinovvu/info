@@ -1,0 +1,7 @@
+csv, xml, json - row text
+
+avro - row, schema in top. + schema evolution (good: kafka, druid)
+
+orc - column formats (good: hive, presto), divided, indexes
+
+parquet - column formats, many different filtering, divided, dictionary encoding (good: impala, arrow, drill, spark)

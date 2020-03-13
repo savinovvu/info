@@ -9,3 +9,5 @@
  microk8s.kubectl get all --all-namespaces
 
  microk8s.kubectl run nginx --image nginx:alpine --replicas 3
+
+  microk8s.kubectl cluster-info
