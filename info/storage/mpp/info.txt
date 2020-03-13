@@ -1,0 +1,2 @@
+for example:
+vertica, greenplum, teradata, kude, clickhouse
