@@ -11,3 +11,6 @@ docker build .
 # from rootfolder for src, .dockerignore move to rootfolder
 docker build –f src/main/resources/docker/admin.dockerfile .
 
+
+
+ #docker -t app-tmp build -f infrastructure/app/project-gradle.dockerfile

@@ -1,0 +1,13 @@
+# help
+jdeps -h
+
+# dependencies app analyse without app dependencies(alien library)
+jdeps name.jar
+
+#dependency
+jdeps -recursive --class-path 'libs/*'  reg-exp.jar
+
+#visualize
+jdeps -summary -recursive --class-path '*' --dot-output dots  reg-exp.jar
+dot -Tpng -O dots/summary.dot
+

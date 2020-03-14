@@ -1,5 +1,5 @@
-# docker run  -it  --entrypoint /bin/sh node-tmp
-docker run  -it  --entrypoint /bin/sh container-image-name
+# docker run -it --entrypoint /bin/sh node-tmp
+docker run -it --entrypoint /bin/sh container-image-name
 
 # bash
 docker-compose exec service-name sh

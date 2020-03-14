@@ -1,0 +1,7 @@
+
+#see variables value
+$JAVA_HOME
+
+
+#see all variables and value
+printenv
