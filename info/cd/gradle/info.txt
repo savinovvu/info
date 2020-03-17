@@ -12,3 +12,8 @@ gradle dependencies
 
 # skip tests
 gradle build -x test
+
+
+# see tasks pipeline
+# example: gradle build -m
+gradle taskName -m
