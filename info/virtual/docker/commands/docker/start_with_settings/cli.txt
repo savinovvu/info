@@ -3,3 +3,7 @@ docker run -it --entrypoint /bin/sh container-image-name
 
 # bash
 docker-compose exec service-name sh
+
+# psql
+docker run -it postgres-container-name psql -U postgres
+
