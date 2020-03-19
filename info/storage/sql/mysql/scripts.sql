@@ -14,3 +14,6 @@ SHOW tables;
 
 #info about tables
 desc TABLES;
+
+# see ddl definition
+show create table;
