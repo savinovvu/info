@@ -7,3 +7,10 @@ GRANT ALL ON germes.* TO 'germes'@'%' IDENTIFIED BY ‘germes’; FLUSH PRIVILEG
 
 #show databases
 SHOW DATABASES;
+
+USE database_name
+
+SHOW tables;
+
+#info about tables
+desc TABLES;

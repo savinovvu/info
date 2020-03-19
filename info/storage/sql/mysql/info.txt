@@ -1,2 +1,17 @@
 # start mysql, then input password
 mysql –uroot -p
+
+
+mysql -u user_name -p
+
+
+show databases;
+
+use database_name
+
+show tables;
+
+#info about table
+desc table_name
+select * from tables\G;
+
