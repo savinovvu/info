@@ -37,3 +37,6 @@ ps aux
 
 # set ttl
 sudo iptables -t mangle -A POSTROUTING -j TTL --ttl-set 65
+
+# some info about user and linux kernel
+uname -a

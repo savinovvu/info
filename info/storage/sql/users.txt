@@ -1,1 +1,8 @@
-create user [user_name] with Password 'password';
+create user user_name with Password 'password';
+
+# set right to connect
+grant CONNECT ON database database_name to user_name;
+
+# set right to select
+grant select ON table table_name to user_name;
+
