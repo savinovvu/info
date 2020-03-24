@@ -1,0 +1,15 @@
+# start mysql, then input password
+mysql –uroot -p
+
+mysql -u user_name -p
+
+#user for localhost
+create user user_name@'localhost' identified with mysql_native_password By 'password';
+
+#user for any ip, but not localhost
+create user user_name@'%' identified with mysql_native_password By 'password';
+
+grant all privileges on database_name.* to user_name@'localhost';
+
+#before 5.7
+flush privileges;

@@ -1,8 +1,4 @@
-# start mysql, then input password
-mysql –uroot -p
 
-
-mysql -u user_name -p
 
 
 show databases;
@@ -15,3 +11,36 @@ show tables;
 desc table_name
 select * from tables\G;
 
+
+#info
+desc files
+
+# see created script
+show create table table_name
+
+#see engines
+show engines
+
+
+#variables
+show variables;
+show variables like '%buffer%';
+
+
+#monitoring
+show processlist
+show full processlist
+show engine innodb status
+show table status
+show status like '%some'
+mysqladmin ext -ri1|grep innodb_buffer_pool_reads
+
+
+#write slow query to file, variables:
+log_slow_query
+slow query_log
+slow query_log_file
+
+
+#utf8mb4, latin, binary etc.
+show character set

@@ -1,0 +1,9 @@
+
+#files
+var/lib/mysql
+
+#configs
+/etc/my.cnf
+
+#logs
+var/log/mysqld.log

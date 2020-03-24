@@ -1,0 +1,6 @@
+
+#database tests
+sysbench --mysql-host=localhost --mysql-user=user_name --mysql-password='password'
+           --db-driver=mysql --mysql-db=db-name /usr/share/sysbench/oltp_read_write.lua prepare
+
+show create table sbtest1;
