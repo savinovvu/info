@@ -3,3 +3,7 @@ SHOW character set;
 show character set like 'utf%';
 
 set names 'utf8mb4';
+
+show variables like %char%;
+
+show collation;
