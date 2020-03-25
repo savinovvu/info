@@ -1,10 +1,11 @@
 1. btree
   a) unique
   b) composition (multy columns)
-  c) function
-  d) clustered (primary key in mysql)
-  e) reverse
-  f) ASC, DESC
+  c) function (example: create index index_name on table_name ((DATE(created_at))), only with function
+  d) start string (exmaple: create index index_name on users(user_name(10))), 10 - count of first symbols
+  e) clustered (primary key in mysql)
+  f) reverse (in future versions, for high concurency)
+  g) ASC, DESC (exmaple: create index index_name on table_name(created_at DESC))
 
 2. full text
 3. hash
