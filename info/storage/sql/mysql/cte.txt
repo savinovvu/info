@@ -1,0 +1,19 @@
+#variable
+cte_max_recursion_depth = 1000;
+
+
+
+WITH
+    cte1 as (select a, b from table1),
+    cte2 as (select c, from table2)
+select b, d from cte1 join cte2 on cte1.a = cte2.c;
+
+
+
+#mysql 8
+WITH RECURSIVE cte(n) AS (
+SELECT 1
+UNION ALL
+SELECT n+1 FROM cte WHERE n < 5;
+)
+SELECT * FROM cte;
