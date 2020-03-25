@@ -1,2 +1,8 @@
 #docker env password variables
 MYSQL_ROOT_PASSWORD=12345
+
+#strict group by
+only_for_group_by
+
+# tmp directory for sort, good for ssd
+show variables like 'tmpdir'

@@ -1,0 +1,11 @@
+1. btree
+  a) unique
+  b) composition (multy columns)
+  c) function
+  d) clustered (primary key in mysql)
+  e) reverse
+  f) ASC, DESC
+
+2. full text
+3. hash
+4. spatial (geodata)

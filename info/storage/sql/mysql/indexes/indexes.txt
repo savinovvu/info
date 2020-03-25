@@ -1,0 +1,12 @@
+#hints
+select  * from table_name  USE_INDEX(index_name)
+
+select  * from table_name  FORCE_INDEX(index_name)
+
+#unused indexes, schema sys
+use sys;
+select * from schema_redundant_indexes;
+select * from schema_unused_indexes;
+
+# info about indexes in table, cardinality(количество уникальных записей, чем больше тем лучше)
+show index from table_name

@@ -1,0 +1,3 @@
+
+# result sum in bottom or with subgrouping result if some group by fields
+... group by ... with ROLLUP
