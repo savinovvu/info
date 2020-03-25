@@ -1,0 +1,2 @@
+# mysql 8
+select * from INFORMATION_SCHEMA.INNODB_TABLES where name like 'astore%ft%';
