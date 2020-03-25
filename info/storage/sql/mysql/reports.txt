@@ -1,3 +1,24 @@
 
 # result sum in bottom or with subgrouping result if some group by fields
 ... group by ... with ROLLUP
+
+
+#partition by
+# fn() over([partition f1, ..fn], order by f1, ..f1 [window clause])
+
+Select year,country,product,profit,
+Sum(profit) OVER() as total_profit,
+sum(profit) over(PARTITION by country) as country_profit,
+AVG(val) OVER (PARTITION BY subject ORDER BY time
+                        ROWS BETWEEN 1 PRECEDING AND 1 FOLLOWING)
+           AS running_average
+ from ...
+ order by ...
+
+
+ SELECT
+   DISTINCT year, country,
+   FIRST_VALUE(year) OVER (w ORDER BY year ASC) AS first,
+   FIRST_VALUE(year) OVER (w ORDER BY year DESC) AS last
+ FROM sales
+ WINDOW w AS (PARTITION BY country);
