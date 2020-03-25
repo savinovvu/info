@@ -1,0 +1,12 @@
+
+select * from mysql.innodb_index_stats;
+
+select * from sys.schema_index_statistics where table_name='table_name'\G;
+
+
+
+desc information_schema.statistics;
+select * from information_schema.statistics;
+
+#mysql 8
+select * from INFORMATION_SCHEMA.INNODB_INDEXES \G

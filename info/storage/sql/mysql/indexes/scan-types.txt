@@ -1,0 +1,4 @@
+1. Tight Index scan
+2. Range Scan
+3. Loose index scan
+4. group by with min() or max()
