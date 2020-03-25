@@ -10,3 +10,9 @@
 2. full text
 3. hash
 4. spatial (geodata)
+
+notes:
+
+# indexes with like
+select * from table name where string_field like 'some text'; - with index
+select * from table name where string_field like '%some text';- without index
