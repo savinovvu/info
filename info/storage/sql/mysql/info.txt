@@ -44,3 +44,10 @@ slow query_log_file
 
 #utf8mb4, latin, binary etc.
 show character set
+
+
+federated tables - table in another db
+
+Delimeter //
+some sql expression
+//

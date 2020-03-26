@@ -1,0 +1,4 @@
+#metadata
+information_schema.routines
+
+show procedure pro_name status

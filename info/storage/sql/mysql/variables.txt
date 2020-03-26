@@ -6,3 +6,12 @@ only_for_group_by
 
 # tmp directory for sort, good for ssd
 show variables like 'tmpdir'
+
+@var - global, session variables
+
+declare var - local variable
+
+SET var = func or const
+
+SELECT some INTO var FROM .... - if 0 rows then null, if 1 row then value
+FETCH some INTO user_var FROM .... - if 0 rows then null, if 1 row then value

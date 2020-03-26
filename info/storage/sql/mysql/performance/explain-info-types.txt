@@ -1,0 +1,41 @@
+# query types
+
+1. simple - simple query
+2. primary - base select
+3. UNION - queries in union
+ a) DEPENDENT UNION - depend from out query
+
+4. UNION RESULT
+5. SUBQUERY - first select in subquery
+ a) DEPENDENT SUBQUERY - depend from out query
+
+
+# select_type
+
+1. DERIVED - production table
+ a) DEPENDENT DERIVED
+2. MATIRIALIZED  tmp table
+3. UNCACHEABLE SUBQUERY
+4. UNCACHEABLE UNION
+
+
+#JOIN TYPES
+
+const - 1 row (usually by primary key)
+eq_ref - точечная выборка
+ref - join by index
+fulltext
+ref_or_null
+index_merge - merge sorted lists
+unique_subquery - точечная выборка по нескольким значениям
+index_subquery
+range - read index by range
+index - full index read
+
+
+EXTRA Fields
+
+using index - using only index
+using where - ограничение кол-ва строк перед следующей связкой или выдачей
+using temporary - using tmp tables
+using filesort - using addition sorting, without index

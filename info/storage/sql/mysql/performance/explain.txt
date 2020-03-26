@@ -1,0 +1,20 @@
+equals: explain, describe, desc
+
+after explain: show warnings
+
+#formats
+explain format=JSON select...
+
+explain format=TREE select...
+
+explain select... \G
+
+=================================== see cost and rows
+show processlist; --> get process id
+explain for connection 2;
+show warnings;
+==================================
+
+
+# with timings
+explain analize select....

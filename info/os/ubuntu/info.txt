@@ -44,3 +44,7 @@ uname -a
 
 # UTC timezones
 find /usr/share -name UTC
+
+
+#memory resources
+free -h

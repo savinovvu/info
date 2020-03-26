@@ -1,0 +1,24 @@
+htop -->if load average param < cpu cores --> need more cores or process is locks, (params1min, 5 min, 15min)
+
+iotop --> if IO > 90% --> search who load data
+
+# see processes in database
+show processlist;
+
+
+======== statistics by table, cardinality - unique value
+analyze table_name;
+#select * from information_schema.INNODB_TABLESTATS where name='table_name';
+select * from information_schema.statistics where table_name='table_name';
+
+==============================
+
+# you can use histograms for better performance
+
+#slow log
+SET GLOBAL log_output='TABLE';
+SET GLOBAL slow_query_log=1;
+SET GLOBAL general_log ='ON';
+...wait...
+
+select * from mysql.slow_log order by query_time desc;
