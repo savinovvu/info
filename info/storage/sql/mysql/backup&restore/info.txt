@@ -1,0 +1,9 @@
+logical
+#save only table structure (-d) and stored procedures (-r)
+mуsqldump databaseName -d -r
+
+mysqlpump
+
+physical
+
+xtrabackup from percona
