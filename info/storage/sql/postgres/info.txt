@@ -12,3 +12,4 @@ select version();
 
 select pg_backend_pid();
 
+select datname from pg_database;
