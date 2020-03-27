@@ -7,5 +7,8 @@ PGPASSWORD=[your password] psql -Umyuser < myscript.sql
 #into with user
 psql -U user_name
 
-#query plan with details
-explain analyze (select ....)
+
+select version();
+
+#exist databases, in psql
+\l

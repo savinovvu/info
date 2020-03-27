@@ -1,0 +1,2 @@
+#query plan with details
+explain analyze (select ....)

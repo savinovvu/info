@@ -1,0 +1,2 @@
+# default 100
+max_connections
