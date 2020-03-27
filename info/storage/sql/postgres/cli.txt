@@ -1,1 +1,4 @@
 \dt
+
+#exist databases, in psql
+\l
