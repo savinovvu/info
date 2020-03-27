@@ -7,3 +7,6 @@ mysqlpump
 physical
 
 xtrabackup from percona
+
+
+more var/lib/xtrabackup_info

@@ -1,0 +1,12 @@
+# need set @@server_id = 2
+=================================
+select @@server_id
+
+more /etc/mysql/my.cnf
+server_id = 2
+=================================
+
+/var/lib/mysql
+
+show master status;
+show slave status;
