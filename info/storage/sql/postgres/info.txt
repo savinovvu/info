@@ -10,5 +10,7 @@ psql -U user_name
 
 select version();
 
+select pg_backend_pid();
+
 #exist databases, in psql
 \l

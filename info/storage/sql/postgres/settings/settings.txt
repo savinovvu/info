@@ -1,0 +1,8 @@
+# default 100
+max_connections
+
+
+# access types
+trust - free access (make for localhost only)
+md5 - login/password
+peer - system user (for localhost only)

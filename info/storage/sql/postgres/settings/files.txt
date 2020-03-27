@@ -1,0 +1,9 @@
+#manual settings
+/etc/postgresql/10/main/postgresql.conf
+
+#not manual, only with command settings
+**/postgresql.auto.conf
+
+
+/etc/postgresql/10/main/pg_hba.conf
+
