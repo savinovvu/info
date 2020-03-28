@@ -1,0 +1,7 @@
+CREATE TABLESPACE space_name OWNER postgres LOCATION '/var/lib/postgres/path_to_folder';
+
+DROP TABLESPACE space_name;
+
+
+#custom path to data
+CREATE DATABASE database_name TABLESPACE = exist_table_space_name;

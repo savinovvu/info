@@ -1,4 +1,25 @@
-\dt
-
 #exist databases, in psql
 \l
+\l+
+
+#use database
+\c database_name
+
+
+#table space
+\db
+\db+
+
+
+#roles
+\du
+\du+
+
+#schema
+\dn
+\dn+
+
+# show tables
+\dt
+
+#go to the schema

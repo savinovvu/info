@@ -1,0 +1,18 @@
+#default role LOGIN
+CREATE USER user_name;
+
+# default NOLOGIN
+CREATE ROLE user_name;
+
+
+ALTER ROLE user_name login createdb;
+
+#Groups
+======================================
+CREATE ROLE group_name;
+GRANT group_name to user_name;
+=====================================
+
+CREATE DATABASE database_name OWNER user_name;
+
+select * from pg_roles;

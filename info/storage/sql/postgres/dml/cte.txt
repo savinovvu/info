@@ -1,0 +1,15 @@
+WITH cte_name (fields...) AS( subquery)
+select from...
+
+
+
+WITH RECURSIVE example as
+(
+select 1 as v
+union all
+select v + 1
+from example where v < 20
+
+)
+
+select * from example;

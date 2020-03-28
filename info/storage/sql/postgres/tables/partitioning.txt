@@ -1,0 +1,11 @@
+1. by list
+create table name1 (field1, field2...) PARTITION BY LIST (field1);
+create table name1_a PARTITION OF name1 FOR VALUES IN (1, 2, 3);
+
+2. by range
+create table name1 (field1, field2...) PARTITION BY RANGE (field1);
+create table name1_a PARTITION OF name1 FOR VALUES FROM (1) to (100);
+
+3. by composite key
+create table name1 (field1, field2...) PARTITION BY RANGE (field1, field2);
+create table name1_a PARTITION OF name1 FOR VALUES FROM (1, 1) to (100, 100);

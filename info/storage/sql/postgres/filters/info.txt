@@ -1,0 +1,7 @@
+like 'HE%' - any symbols after HE
+
+like 'BE_' - one symbol after BE
+
+similar to 'J(O|E)%' - regexp
+
+select from actor where first_name ~ '^J[OEAU]+'; # JUDE, JULIA, JAMES etc.
