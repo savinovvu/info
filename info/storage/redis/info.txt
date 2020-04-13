@@ -1,0 +1,23 @@
+http://localhost:8080/visited_domains?from=0&to=2222222222222
+
+#stop
+/etc/init.d/redis-server stop
+
+#start
+/etc/init.d/redis-server start
+
+#restart
+/etc/init.d/redis-server restart
+
+#start cli
+redis-cli
+
+#check in cli
+ping
+
+#scan all
+keys *
+
+#delete all
+redis-cli FLUSHALL
+redis-cli FLUSHDB
