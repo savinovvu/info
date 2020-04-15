@@ -1,2 +1,6 @@
 # common info
 curl http://localhost:9200/
+
+#indexing
+PUT /{index}/{type}/{id}
+{"field": "value"}

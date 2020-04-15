@@ -1,0 +1,34 @@
+# in kibana -> devops -> console
+
+GET _search
+{
+  "query": {
+    "match_all": {}
+  }
+}
+
+PUT /vehicles/car/123
+{
+  "make": "Honda",
+  "Color" : "Black",
+  "HP" : "250",
+  "milage" : "24000",
+  "price" : "19300.97"
+}
+
+POST /vehicles/car/123/_update
+{
+  "doc" : {
+   "price": 1000.20
+  }
+
+}
+
+GET /vehicles/car/123
+
+DELETE /vehicles/car/123
+
+DELETE /vehicles
+
+#exist
+HEAD /vehicles/car/123
