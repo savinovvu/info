@@ -1,0 +1,7 @@
+  mysql-db:
+        image: mysql
+        healthcheck:
+            test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
+            timeout: 45s
+            interval: 10s
+            retries: 10
