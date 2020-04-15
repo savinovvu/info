@@ -1,0 +1,9 @@
+
+
+docker exec -it dockerelkmaster_elasticsearch_1 /bin/bash
+
+* user: *elastic*
+* password: *changeme*
+
+
+localhost:5601 - kibana

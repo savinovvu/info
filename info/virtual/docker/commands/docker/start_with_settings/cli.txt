@@ -1,9 +1,15 @@
 # docker run -it --entrypoint /bin/sh node-tmp
 docker run -it --entrypoint /bin/sh container-image-name
 
+# into working container
+docker exec -it container-name /bin/bash
+
+
 # bash
 docker-compose exec service-name sh
 
 # psql
 docker run -it postgres-container-name psql -U postgres
+
+
 
