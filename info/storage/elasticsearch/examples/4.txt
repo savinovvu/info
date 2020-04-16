@@ -1,0 +1,48 @@
+PUT /customers/124
+{
+  "name": "Mary Cranford",
+  "address": "310 Clark Ave",
+  "gender": "female",
+  "age": 34,
+  "total_spend": 550.75,
+  "is_new": false
+}
+
+
+PUT /customers/_mapping
+{
+  "dynamic": "strict"
+}
+
+
+#No whitespace
+POST _analyze
+{
+  "analyzer": "whitespace",
+  "text": "The quick brown fox."
+}
+
+
+#with lowercase
+POST _analyze
+{
+  "analyzer": "standard",
+  "text": "The quick brown fox."
+}
+
+
+# with letter only
+POST _analyze
+{
+  "analyzer": "simple",
+  "text": "The quick984 brown784 fox."
+}
+
+
+
+POST _analyze
+# without stop word, example: The, running -> run, foxes -> fox
+{
+  "analyzer": "english",
+  "text": "The quick running foxes."
+}
