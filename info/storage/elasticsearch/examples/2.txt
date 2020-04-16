@@ -1,0 +1,61 @@
+
+PUT /business/building/110
+{
+   "address" : "57 New Dover Ln",
+   "floors" : 10,
+   "offices" : 21,
+   "loc" : {
+        "lat": 40.707,
+        "lon": -74.008
+   }
+}
+
+PUT /business/building/217
+{
+   "address" : "11 Pen",
+   "floors" : 5,
+   "offices" : 21,
+   "price": 450000,
+   "loc" : {
+        "lat": 40.707,
+        "lon": -74.008
+   }
+}
+
+PUT /employees/_doc/330
+{
+   "name": "Richard",
+   "title": "Senior",
+   "salary_usd": 115000.00,
+   "hiredate": "Jan 19, 2013"
+}
+
+
+PUT /employees/_doc/9987
+{
+   "name": "renovation",
+   "date_signed": "Jan 19, 2013",
+   "employees_involved": [331, 330, 398]
+}
+
+
+GET business/building/_search
+GET business/_search
+
+GET business/_search
+{
+  "query": {
+    "term":{
+      "address": "pen"
+    }
+  }
+}
+
+curl -u elastic:changeme \
+-XGET "http://localhost:9200/business/_search" \
+-H 'Content-Type: application/json' \
+{
+  "query": {
+    "match_all": {}
+  }
+}'
