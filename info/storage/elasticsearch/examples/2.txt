@@ -51,11 +51,25 @@ GET business/_search
   }
 }
 
+
+#all items
 curl -u elastic:changeme \
 -XGET "http://localhost:9200/business/_search" \
--H 'Content-Type: application/json' \
+-H 'Content-Type: application/json' -d '
 {
   "query": {
     "match_all": {}
   }
 }'
+
+
+#formatted output with pretty
+curl -u elastic:changeme \
+-XGET "http://localhost:9200/business/_search?pretty" \
+-H 'Content-Type: application/json' -d '
+{
+  "query": {
+    "match_all": {}
+  }
+}'
+
