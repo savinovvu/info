@@ -1,0 +1,10 @@
+GET /courses/_search
+{
+    "query":{
+        "bool":{
+            "filter":{
+                "match": {"name": accounting}
+            }
+        }
+    }
+}

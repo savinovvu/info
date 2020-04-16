@@ -1,0 +1,102 @@
+GET /some-index/_search
+{
+    "query":{
+        "match_all": {}
+    }
+}
+
+GET /some-index/_search
+{
+    "query":{
+        "match": {"field_name": "value"},
+        "match": {"field_name2": "value2"}
+    }
+}
+
+
+GET /some-index/_search
+{
+    "query":{
+        "exists": {"field": "json.path.to.field"}
+    }
+}
+
+
+GET /some-index/_search
+{
+    "query":{
+        "bool":{
+            "must":[
+                {"match": {"field_name": "value"}},
+                {"match": {"field_name2": "value2"}}
+            ],
+            "must_not":[
+                {"match": {"field_name3": "value3"}}
+            ],
+
+            "should" :[
+                {"match": {"field_name4": "value4"}},
+                {"match": {"field_name5": "value5"}},
+                {"match": {"field_name6": "value6"}}
+            ],
+            "minimum_should_match" : 1,
+
+            "should_not" :[
+                            {"match": {"field_name4": "value4"}},
+                            {"match": {"field_name5": "value5"}},
+                            {"match": {"field_name6": "value6"}}
+                        ],
+
+        },
+    }
+}
+
+GET /some-index/_search
+{
+    "query":{
+        "multi_match":{
+        "fields": ["name", "professor.department"],
+        "query": "value for fields with or logic"
+        }
+    }
+
+}
+
+
+GET /some-index/_search
+{
+    "query":{
+        "match_phrase":{
+        "course_description": "total pharase"
+        }
+    }
+
+}
+
+
+GET /some-index/_search
+{
+    "query":{
+        "match_phrase_prefix":{
+        "course_description": "partial phrase"
+        }
+    }
+
+}
+
+
+GET /some-index/_search
+{
+    "query":{
+        "range":{
+            "field_name":{
+                "gte":10,       # greate or equal, gt - without equal, possible use ISO date
+                "lte":20,       # lt without equal
+            }
+        }
+    }
+
+}
+
+
+
