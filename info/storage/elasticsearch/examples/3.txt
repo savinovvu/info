@@ -1,0 +1,44 @@
+PUT /customers
+{
+  "settings": {
+    "number_of_shards": 2,
+    "number_of_replicas": 1
+  },
+  "mappings": {
+
+  }
+}
+
+GET /customers
+
+DELETE /customers
+
+
+PUT /customers
+{
+  "mappings": {
+      "properties": {
+        "gender": {
+          "type": "text",
+          "analyzer": "standard"
+        },
+        "age": {
+          "type": "integer"
+        },
+        "total_spent": {
+          "type": "float"
+        },
+        "is_new": {
+          "type": "boolean"
+        },
+        "name": {
+          "type": "text",
+          "analyzer": "standard"
+        }
+      }
+  },
+  "settings": {
+    "number_of_shards": 2,
+    "number_of_replicas": 1
+  }
+}
