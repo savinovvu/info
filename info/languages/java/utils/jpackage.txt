@@ -5,3 +5,6 @@ jpackage -n project-name -i ./target --main-jar jar-file-name.jar
 
 # without main class
 jpackage -n project-name -i ./target --main-class myapp.Main --main-jar jar-file-name.jar
+
+#with custom jre -> --runtime image
+jpackage -n promject-name -i ./targer --main-jar some.jar --runtime-image java14-demo-runtime
