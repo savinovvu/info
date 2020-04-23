@@ -1,0 +1,7 @@
+# for build native package
+
+#./target - for maven project, must be executable with Meta-inf
+jpackage -n project-name -i ./target --main-jar jar-file-name.jar
+
+# without main class
+jpackage -n project-name -i ./target --main-class myapp.Main --main-jar jar-file-name.jar
