@@ -35,8 +35,8 @@ df -h
 # see started processed
 ps aux
 
-# set ttl
-sudo iptables -t mangle -A POSTROUTING -j TTL --ttl-set 65
+# set ttl, write in file etc/sysctl.conf, then reboot
+net.ipv4.ip_default_ttl=65
 
 # some info about user and linux kernel
 uname -a
