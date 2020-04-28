@@ -1,0 +1,2 @@
+# add ssh key
+ssh-add -K <path to private>
