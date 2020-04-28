@@ -48,3 +48,7 @@ find /usr/share -name UTC
 
 #memory resources
 free -h
+
+
+#execute script with background
+sh idea.sh & disown
