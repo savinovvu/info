@@ -1,0 +1,6 @@
+https://blog.romach007.com/how-to-install-sdkman-on-ubuntu
+
+#upgrade sdkman
+sdk selfupdate force
+
+

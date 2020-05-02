@@ -1,0 +1,9 @@
+version jdk
+https://sdkman.io/jdks#AdoptOpenJDK
+
+sdk list java
+
+sdk install java 8.0.252-open
+
+sdk use java 8.0.252-open - with this terminal
+sdk default java 8.0.252-open - all terminals
