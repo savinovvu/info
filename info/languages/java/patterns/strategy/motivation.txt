@@ -1,0 +1,29 @@
+You have 2 almost equal methods, like:
+
+public Class {
+
+    public void method1(){
+        repeatedcode1();
+        repeatedcode2();
+        repeatedcode3();
+        someAnotherCode1();  // attention
+        repeatedcode4();
+        someAnotherCode2();  // attention
+        repeatedcode5();
+
+    }
+
+    public void method2(){
+        repeatedcode1();
+        repeatedcode2();
+        repeatedcode3();
+        someAnotherCode3();  // attention
+        repeatedcode4();
+        someAnotherCode4();  // attention
+        repeatedcode5();
+
+    }
+
+}
+
+task: make 1 method;

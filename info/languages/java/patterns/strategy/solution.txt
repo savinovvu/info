@@ -1,0 +1,52 @@
+Make interface, and implement some strategies:
+
+interface StrategyInterface {
+
+    void anotherMethod1();
+
+    void anotherMethod2();
+
+}
+
+class Strategy1 implements StrategyInterface {
+
+    void anotherMethod1(){
+        firstStrategycode;
+    }
+
+    void anotherMethod2(){
+        firstStrategycode;
+    }
+
+}
+
+class Strategy2 implements StrategyInterface {
+
+    void anotherMethod1(){
+        secondStrategycode;
+    }
+
+    void anotherMethod2(){
+        secondStrategycode;
+    }
+
+}
+
+
+public Class {
+
+    public void method( StrategyInterface strategy ){
+        repeatedcode1();
+        repeatedcode2();
+        repeatedcode3();
+        strategy.anotherMethod1();  // attention
+        repeatedcode4();
+        strategy.someAnotherCode2();  // attention
+        repeatedcode5();
+
+    }
+
+}
+
+
+Result: replace method1 and method2 to method with strategy
