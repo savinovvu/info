@@ -1,0 +1,21 @@
+# git create branch
+
+# to commit, detached head
+git checkout commit_hash
+
+#parent master
+git checkout master^^2~5
+
+#parent HEAD
+git checkout HEAD^
+
+#back to 5 commit
+git checkout HEAD~5
+
+#move branch to commit
+git branch -f branch_name commit_hash
+git branch -f master HEAD~3
+
+
+#delete it
+git fakeTeamwork foo +2

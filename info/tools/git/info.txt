@@ -1,5 +1,9 @@
-# make from merged to master
-git rebase
+#commit tree
+git log
 
-# to commit
-git checkout commit_hash
+#tag
+git tag tag_name commit_hash
+
+#distance commit to tag
+git describe commit_hash
+git describe branch_name

@@ -1,0 +1,31 @@
+# make from merged to master
+git rebase to_branch
+git rebase to_branch from_branch
+
+#rebase last 5 commits
+git rebase -i HEAD^5
+
+#to top of origin
+git rebase origin/master
+
+#reset
+git reset to_commit_hash
+
+#copy commit range from one branch to another
+git cherry-pick start_hash end_hash
+
+#change last commit
+git commit --amend
+
+#set origin branche
+git checkout -b some-branch-name o/master
+git branch -u
+
+
+# push when head anywhere
+git push origin branch-name
+
+# from location -> commit or branch
+git push origin source-local:remote-branch
+git fetch origin source-remote:local-branch
+
