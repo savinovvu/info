@@ -1,0 +1,5 @@
+# make from merged to master
+git rebase
+
+# to commit
+git checkout commit_hash
