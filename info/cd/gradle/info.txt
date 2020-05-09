@@ -17,3 +17,12 @@ gradle build -x test
 # see tasks pipeline
 # example: gradle build -m
 gradle taskName -m
+
+
+# start task with params
+gradle myTask -PmyArg=hello
+task myTask {
+    doFirst {
+       println myArg
+    }
+}

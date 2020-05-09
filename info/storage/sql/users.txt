@@ -6,3 +6,5 @@ grant CONNECT ON database database_name to user_name;
 # set right to select
 grant select ON table table_name to user_name;
 
+#create admin
+ALTER USER user_name WITH SUPERUSER;
