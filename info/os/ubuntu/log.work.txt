@@ -1,0 +1,2 @@
+# see last 10 lines from file
+tail -10 app.log
