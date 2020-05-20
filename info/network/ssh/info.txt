@@ -1,2 +1,4 @@
 # add ssh key
 ssh-add <path to private>
+
+ssh username@host
