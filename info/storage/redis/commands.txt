@@ -1,0 +1,22 @@
+redis-cli help
+
+#loop 10 times with incr
+redis-cli -r 10 incr counter
+
+#loop 10 times every 0.5 sec
+redis-cli -r 10 -i 0.5 incr counter
+
+#output to file
+redis-cli -raw -r 10 -i 0.5 incr counter > file.log
+
+#input to foo from file
+redis-cli -x set foo < /etc/services
+
+
+#with script
+redis-cli- -eval /home/some.lua
+
+#clean all (from all databases)
+redis-cli flushall
+
+

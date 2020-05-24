@@ -1,0 +1,17 @@
+#host and port
+redis-cli -h ip_or_domain -p 6379
+
+#connect with url... /2 - database number( total 16)
+redis-cli -u redis://password@localhost:6379
+redis-cli -u redis://password@localhost:6379/2
+
+
+#with password
+redis-cli -a some_password
+
+#connect to number 2 database
+redis-cli -n 2
+
+
+
+
