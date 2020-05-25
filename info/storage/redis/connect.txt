@@ -12,6 +12,12 @@ redis-cli -a some_password
 #connect to number 2 database
 redis-cli -n 2
 
+#from cli
+connect 127.0.0.1 6379
+
+#from cli to 2nd database
+select 2
 
 
+redis-cli AUTH test
 

@@ -1,0 +1,22 @@
+# background
+daemonize yes
+
+port 7000
+
+# logging level
+loglevel debug
+
+#logfile path
+logfile ./redis.log
+
+#write on disk: 300 - every 5 min , 5 changes in data
+save 300 10
+
+#set password
+requirepass some_passord
+
+rename-command command-name renamed-command name
+
+maxclients 1
+
+slave-read

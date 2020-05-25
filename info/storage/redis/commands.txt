@@ -19,4 +19,8 @@ redis-cli- -eval /home/some.lua
 #clean all (from all databases)
 redis-cli flushall
 
+# read commands from file and execute to redis
+cat ./scripts/commands.txt | redis-cli
 
+#cli: save data to disk
+BGSAVE

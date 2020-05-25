@@ -1,0 +1,22 @@
+#server stat
+redis-cli --stat
+
+# count of values
+redis-cli --bigkeys
+
+# bytes of values
+redis-cli --memkeys
+
+# big keys from big to small
+redis-cli --scan
+
+# scan with "l" keys
+redis-cli --scan --pattern "*l*"
+
+# keys in all databases
+redis-cli dbsize
+
+
+# cli:...
+client list
+
