@@ -1,0 +1,2 @@
+# see hdfs file system
+hdfs dfs -ls /
