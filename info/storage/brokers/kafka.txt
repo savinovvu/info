@@ -1,3 +1,11 @@
 kafkacat
 
-kafkacat -L -b kafka
+#see metadata
+kafkacat -L -b kafkahost.com
+
+#see metadata
+kafkacat -L -b kafkahost.com -t "topic name"
+
+
+#see data
+kafkacat -b kafkahost.com -t "topic name"
