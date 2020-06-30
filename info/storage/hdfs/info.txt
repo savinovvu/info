@@ -1,2 +1,12 @@
 # see hdfs file system
 hdfs dfs -ls /
+
+# command from user
+HADOOP_USER_NAME=hadoop hdfs dfs -ls /
+HADOOP_USER_NAME=hadoop hdfs dfs -ls /path/to/lists/
+
+#copy
+HADOOP_USER_NAME=hadoop  hdfs dfs -cp /path/to/lists/1/1.1.bin /path/to/lists/1/2.2.bin
+
+#remove
+HADOOP_USER_NAME=hadoop  hdfs dfs -rm /path/to/lists/1/2.2.binin

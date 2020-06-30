@@ -1,0 +1,3 @@
+kafkacat
+
+kafkacat -L -b kafka
