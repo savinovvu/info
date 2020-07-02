@@ -1,3 +1,5 @@
 /.idea/**
 
 /info/virtual/vagrant/**/.vagrant/**
+
+prod.txt
