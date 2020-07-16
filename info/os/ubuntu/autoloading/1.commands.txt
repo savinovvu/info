@@ -1,0 +1,14 @@
+# list of enabled services
+systemctl list-unit-files --type=service --state=enabled
+
+#disabled
+systemctl list-unit-files --type=service --state=disabled
+
+#show of concrete service
+systemctl is-enabled mysql.service
+
+#turn off service
+sudo systemctl disable mysql.service
+
+#turn on service
+sudo systemctl enable mysql.service

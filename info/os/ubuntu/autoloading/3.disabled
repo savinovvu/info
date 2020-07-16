@@ -1,0 +1,19 @@
+snap.microk8s.daemon-apiserver-kicker.service   enabled enabled
+snap.microk8s.daemon-apiserver.service          enabled enabled
+snap.microk8s.daemon-cluster-agent.service      enabled enabled
+snap.microk8s.daemon-containerd.service         enabled enabled
+snap.microk8s.daemon-controller-manager.service enabled enabled
+snap.microk8s.daemon-etcd.service               enabled enabled
+snap.microk8s.daemon-flanneld.service           enabled enabled
+snap.microk8s.daemon-kubelet.service            enabled enabled
+snap.microk8s.daemon-proxy.service              enabled enabled
+snap.microk8s.daemon-scheduler.service          enabled enabled
+
+redis-server.service                            enabled enabled
+redis.service                                   enabled enabled
+
+postgresql.service                              enabled enabled
+
+nginx.service                                   enabled enabled
+
+mongodb.service                                 enabled enabled
