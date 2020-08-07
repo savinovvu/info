@@ -4,7 +4,7 @@ curl -u elastic:changeme \
 -XGET "http://localhost:9200/business/_search" \
 -H 'Content-Type: application/json' \
 -H 'Second-Header: some value' \
-{
+'{
   "query": {
     "match_all": {}
   }

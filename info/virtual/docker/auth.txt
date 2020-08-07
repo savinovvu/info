@@ -1,0 +1,12 @@
+Если Docker не запоминает авторизацию, можно добавить её руками в ~/.docker/config.json:
+
+{
+  "auths": {
+    "docker.domain.ru": {"auth": "base_64_string"}
+  },
+  "credsStore": "osxkeychain"   <--- это поле нужно удалить
+}
+
+где base_64_string — закодированная в Base64 строка логин:пароль,
+которую можно получить, например,
+командой echo -n логин:пароль | base64 | pbcopy.
