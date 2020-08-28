@@ -1,0 +1,6 @@
+mkdir dir
+
+mkdir dir/dir2
+
+#создать родителя, если его нет
+mkdir -p dir/dir2/dir3

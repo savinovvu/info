@@ -1,0 +1,6 @@
+# go to home
+cd
+
+cd /home/example
+cd ../../example
+

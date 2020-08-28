@@ -1,0 +1,5 @@
+# copy from to
+cp pathFrom pathTo
+
+# копировать рекурсивно каталогами
+cp -r dir dir2
