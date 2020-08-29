@@ -1,0 +1,14 @@
+#stop
+systemctl stop service_name
+
+#start
+systemctl start service_name
+
+#restart
+systemctl restart service_name
+
+#status
+systemctl status service_name
+
+#reload
+systemctl reload service_name

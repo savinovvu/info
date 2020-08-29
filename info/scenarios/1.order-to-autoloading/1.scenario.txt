@@ -1,0 +1,10 @@
+systemctl list-unit-files --type=service --state=enabled
+
+sudo systemctl disable bluetooth.service
+sudo systemctl disable mongodb.service
+sudo systemctl disable nginx.service
+sudo systemctl disable postgresql.service
+sudo systemctl disable redis-server.service
+sudo systemctl disable redis.service
+
+sudo systemctl daemon-reload
