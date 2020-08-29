@@ -1,0 +1,7 @@
+tail - строки вконце файла
+
+tail -3 ./filename
+tail -n -3 ./filename
+
+#фоном выводить
+tail -f ./filename

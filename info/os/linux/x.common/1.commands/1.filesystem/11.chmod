@@ -1,0 +1,22 @@
+изменить права
+chmod
+# убрать права на запись для user
+chmod u-w filename
+
+# для группы
+chmod g+w filename
+
+# для остальных
+chmod o+w filename
+
+# назначить сразу пользователю, группе и всем остальным
+chmod u+rwx,g-x,o-rwx filename
+
+# для всех
+chmod a+rwx filename
+
+при работе с директорией изменить права на все вложенные файлы и директорию, ключи -R
+chmod -R a+rwx div/
+
+#rwrwrw
+chmod 666  dirname

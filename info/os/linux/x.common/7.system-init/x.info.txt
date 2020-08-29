@@ -1,0 +1,12 @@
+# набор стартовых скриптов sysV, upstart совместим с ней, но не зашёл.
+/etc/init.d
+
+#upstart
+команда service
+/etc/rcN.. - порядковый номер
+
+# старт cлужб systemd
+/lib/systemd/system
+
+# сгенерировано из init.d для использования в systemd
+ls -l /run/systemd/generator.late/

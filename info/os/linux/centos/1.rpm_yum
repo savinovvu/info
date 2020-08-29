@@ -1,0 +1,18 @@
+yum - работа с репозиторием
+rpm - пакетный менеджер
+
+#install apache
+yum install httpd
+
+yum provides *ls
+# посчитать строки
+yum provides *ls | wc -l
+
+# поиск пакета по файлу
+yum provides
+
+# что установлено
+rpm -qa
+
+# удалить пакет
+yum remove httpd

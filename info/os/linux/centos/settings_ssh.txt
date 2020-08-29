@@ -1,0 +1,7 @@
+https://stackoverflow.com/questions/36300446/ssh-permission-denied-publickey-gssapi-with-mic
+
+set in centos in file /etc/ssh/sshd_config
+0. yum install openssh-server
+1. PasswordAuthentication yes
+2. sudo systemctl restart sshd
+3. ssh  -p 2222 vagrant@127.0.0.1

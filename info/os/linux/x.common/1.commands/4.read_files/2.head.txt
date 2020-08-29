@@ -1,0 +1,6 @@
+head - вывод первых строки
+
+# вывести первые 3 строки
+head -3 ./filename
+head -n 3 ./filename
+

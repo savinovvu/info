@@ -1,0 +1,2 @@
+# добавить группу
+sudo usermod -aG group_name user_name

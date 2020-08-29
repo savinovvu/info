@@ -1,0 +1,5 @@
+ln - создать линк на файл, hardlink
+
+ln filename filename_hl
+
+ln -s filename1 filename2 - софтлинк 1й файл ссылкается на 2й файл

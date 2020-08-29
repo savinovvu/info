@@ -1,0 +1,34 @@
+
+1. создаём файл
+sudo touch /lib/systemd/system/runscript.service
+
+либо, для юзеров
+sudo touch /lib/systemd/system/runscript.service
+
+2. Добавляем в него:
+===========================================
+# краткое описание
+[Unit]
+Description=My Script Service
+
+#запустить в многопользовательском режиме
+After=multi-user.target
+
+# тип сервиса. idle - запустить и забыть
+[Service]
+Type=idle
+
+# полный путь до скрипта
+ExecStart=/usr/bin/local/script.sh
+[Install]
+WantedBy=multi-user.target
+=============================================
+
+3. обновить конфиг
+sudo systemctl daemon-reload
+
+4. включить скрипт
+sudo systemctl enable runscript.service
+
+5. права на выполнение
+sudo chmod u+x /usr/local/bin/script.sh

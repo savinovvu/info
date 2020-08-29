@@ -1,0 +1,14 @@
+ls
+
+# see hidden
+ls -la
+
+# see inode number
+ls -li
+
+#human format
+ls -lh
+
+
+#pipe start line from -, contain rwx, end 2,
+cat stdout | grep ^- | grep rwx | grep 2$

@@ -1,0 +1,8 @@
+# see memory
+df
+
+information abount inode
+df -i
+
+# кто куда подмонтирован
+df -h

@@ -1,0 +1,16 @@
+cat file | grep "some word"
+
+
+grep "template" ./filename
+
+#регистронезависимый вывод
+grep -i "TeMplate" ./filename
+
+# убрать пустые строки
+grep -v ^$
+
+# убрать комментарии
+grep -v ^#
+
+И то и другое
+grep -v ^$ | grep -v ^#

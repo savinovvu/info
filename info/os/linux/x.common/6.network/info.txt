@@ -1,0 +1,15 @@
+# ip адрес узнать
+ip a
+
+# маршрут по умолчанию
+ip r
+
+# DNS сервер
+etc/resolv.conf
+должна быть строка, например:
+nameserver 8.8.8.8
+
+# t - tcp, l порты слушаеются, p - имя программы
+sudo ss -tnlp
+# u - udp
+sudo ss -unlp

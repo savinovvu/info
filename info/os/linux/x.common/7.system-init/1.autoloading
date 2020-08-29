@@ -1,0 +1,14 @@
+#список всех сервисов, q - выход
+systemctl list-units --type=service
+
+#сервисы которые выполняются
+systemctl list-units --type=service --state=running
+
+#сервисы в автозагрузке
+systemctl list-unit-files --type=service --state=enabled
+
+# добавить сервис в автозагрузку
+sudo systemctl enable service_name
+
+# удалить сервис из автозагрузки
+sudo systemctl disable service_name
