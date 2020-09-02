@@ -13,5 +13,9 @@ docker-compose exec service-name sh
 # psql
 docker run -it postgres-container-name psql -U postgres
 
+docker run -it --entrypoint /bin/sh fb-centos7:latest
 
 
+docker run -it --entrypoint /bin/bash docker build fb-centos7:slim:latest
+docker run -it --entrypoint /bin/bash docker build fb-centos7:slim
+docker run -it --entrypoint /bin/bash docker build fb-centos7:latest

@@ -1,0 +1,5 @@
+folders structure
+
+~/.config/JetBrains/
+~/.cache/JetBrains/
+~/.local/share/JetBrains/
