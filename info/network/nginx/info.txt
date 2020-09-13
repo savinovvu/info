@@ -24,6 +24,8 @@ sudo nginx -t
 #reload
 systemctl reload nginx
 
+#reload in docker-container
+nginx -s reload
 
 curl -I http://127.0.0.1
 

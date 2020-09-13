@@ -1,2 +1,5 @@
 # memory per thread
 java -XX:+PrintFlagsFinal -version | grep ThreadStackSize
+
+# see manifest
+unzip -q -c dmp-ssec.jar META-INF/MANIFEST.MF

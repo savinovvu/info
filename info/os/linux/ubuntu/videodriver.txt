@@ -1,0 +1,20 @@
+https://losst.ru/ustanovka-drajvera-nvidia-v-ubuntu-18-04
+
+# посмотреть последний драйвер
+ubuntu-drivers devices
+
+sudo apt install nvidia-driver-450
+
+программы и обновления --> дополнительные параметры
+
+Nvidia Settings
+
+
+==============================
+https://github.com/phillipberndt/fakexrandr
+
+fakexrandr-manage
+
+xrandr
+
+sudo systemctl restart display-manager

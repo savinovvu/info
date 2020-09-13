@@ -17,4 +17,5 @@ docker-compose restart container-name
 docker-compose run --service-ports web /bin/bash
 
 @bash without ports
-docker-compose run web bash
+docker-compose run app /bin/bash
+docker-compose run app bash
