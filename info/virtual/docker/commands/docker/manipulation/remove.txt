@@ -4,3 +4,5 @@ docker rm -f $(docker ps -a -q)
 #remove all images
 docker rmi $(docker images -a -q)
 
+#remove unnamed
+docker rmi $(docker images -f dangling=true -q)
