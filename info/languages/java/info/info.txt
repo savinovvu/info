@@ -3,3 +3,9 @@ java -XX:+PrintFlagsFinal -version | grep ThreadStackSize
 
 # see manifest
 unzip -q -c dmp-ssec.jar META-INF/MANIFEST.MF
+
+# see max heapsize
+java -XX:+PrintFlagsFinal -version | grep -Ei "maxheapsize|maxram"
+
+# see cgroup
+cat /sys/fs/cgroup/memory/memory.limit_in_bytes

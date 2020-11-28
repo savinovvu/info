@@ -1,5 +1,4 @@
-#with basic auth
-
+#with basic auth and body
 curl -u elastic:changeme \
 -XGET "http://localhost:9200/business/_search" \
 -H 'Content-Type: application/json' \
@@ -9,3 +8,10 @@ curl -u elastic:changeme \
     "match_all": {}
   }
 }'
+
+
+
+#with basic-auth RequestParam param_int and param_string
+curl -X POST -D- 'http://localhost:8080/some-path?param_int=54605&param_string=some@some.com&' \
+	-H 'Content-Type: application/text' \
+	-u username:password

@@ -10,6 +10,7 @@ create user user_name@'localhost' identified with mysql_native_password By 'pass
 create user user_name@'%' identified with mysql_native_password By 'password';
 
 grant all privileges on database_name.* to user_name@'localhost';
+grant all privileges on *.* to user_name@'localhost' IDENTIFIED BY 'password';
 
 #before 5.7
 flush privileges;
