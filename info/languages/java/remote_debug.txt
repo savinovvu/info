@@ -1,0 +1,9 @@
+
+==================== start app with:
+java -Xdebug -Xrunjdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 -jar app.jar
+
+==================== In Intellij
+Host: your.host.com
+Port: some_port
+#  Command line argument for remote JVM
+-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005

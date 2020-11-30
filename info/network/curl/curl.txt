@@ -15,3 +15,14 @@ curl -u elastic:changeme \
 curl -X POST -D- 'http://localhost:8080/some-path?param_int=54605&param_string=some@some.com&' \
 	-H 'Content-Type: application/text' \
 	-u username:password
+
+
+#with cookie
+	curl -X GET -D- 'http://localhost:8083/some_path' \
+    	-H 'Content-Type: application/text' \
+    	 -v --cookie "cookie_name=cookie_value"
+
+# download file
+    curl -X GET -D- 'http://localhost:8080/some_path' \
+        -H 'Content-Type: application/text' \
+        -o vam.csv
