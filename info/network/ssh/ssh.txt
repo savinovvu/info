@@ -1,0 +1,7 @@
+# add ssh key
+ssh-add <path to private>
+
+ssh username@host
+
+# port forwarding, server port to localhost
+ssh url_remote_server.ru -L 5005:127.0.0.1:5005

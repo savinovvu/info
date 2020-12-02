@@ -1,0 +1,5 @@
+git rebase -i HEAD~1
+пометить как edit и сохранить
+git reset HEAD^
+
+git rebase --continue
