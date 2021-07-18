@@ -52,3 +52,6 @@ free -h
 
 #execute script with background
 sh idea.sh & disown
+
+# текущая загрузка дисковой подсистемы
+iostat -dx

@@ -4,3 +4,5 @@ asdf local ruby 2.5.1
 gem install bundler
 
 gem list bundle
+
+bundle install

@@ -1,0 +1,5 @@
+#delete local
+git tag -d <tag_name>
+
+#delete remote
+git push origin :refs/tags/<tag>

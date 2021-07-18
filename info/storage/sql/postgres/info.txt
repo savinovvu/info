@@ -13,3 +13,52 @@ select version();
 select pg_backend_pid();
 
 select datname from pg_database;
+
+
+
+-- auto-generated definition
+create table skin (
+    skin_id     serial  not null
+        constraint skin_pk
+            primary key,
+    template_id integer not null,
+    tag         integer not null,
+    label       integer not null
+);
+
+alter table skin
+    owner to postgres;
+
+create unique index skin_label_uindex
+    on skin(label);
+
+create unique index skin_skin_id_uindex
+    on skin(skin_id);
+
+create unique index skin_tag_uindex
+    on skin(tag);
+
+grep -A 3 -B 7  --group-separator=$'\n\n' "\"public\".\"skin\"" website2
+
+ grep -A 3 -B 7 --group-separator=$'\n\n'
+
+
+ grep -A 3 -B 7  --group-separator=$'\n\n' "\"public\".\"skin\"" website2
+ grep -A 3 -B 7  --group-separator=$'\n\n' "CREATE SEQUENCE IF NOT EXISTS skin_skin_id_seq;" website2
+ grep -A 30 -B 7  --group-separator=$'\n\n' "CREATE TABLE \"public\".\"skin\"" website2
+
+
+
+=========
+CREATE SEQUENCE IF NOT EXISTS skin_skin_id_seq;
+
+
+CREATE TABLE "public"."skin" (
+    "skin_id" int4 NOT NULL DEFAULT nextval('skin_skin_id_seq'::regclass),
+    "template_id" int4 NOT NULL,
+    "tag" varchar(64) NOT NULL,
+    "label" text NOT NULL,
+    PRIMARY KEY ("skin_id")
+);
+
+CREATE EXTENSION citext;

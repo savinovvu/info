@@ -1,0 +1,22 @@
+echo -e '#!/bin/bash\n/opt/kafka/bin/kafka-topics.sh "$@"' >> /usr/bin/kafka-topics && \
+    chmod +x /usr/bin/kafka-topics
+
+
+
+echo -e '#!/bin/bash\nkafka-topics "$@"' > /opt/kafka/bin/kafka-topics.sh && \
+    chmod +x /opt/kafka/bin/kafka-topics.sh
+
+
+
+echo -e '#!/bin/bash\n/snap/bin/kafka.kafka-streams-application-reset "$@"' > /opt/kafka/bin/kafka-streams-application-reset.sh && \
+    chmod +x /opt/kafka/bin/kafka-streams-application-reset.sh
+
+
+
+echo -e '#!/bin/bash\n/snap/bin/kafka.kafka-streams-application-reset "$@"' > /opt/kafka/bin/kafka-streams-application-reset.sh && \
+    chmod +x /opt/kafka/bin/kafka-streams-application-reset.sh
+
+
+=================
+#!/bin/bash
+/snap/bin/kafka.topics "$@"

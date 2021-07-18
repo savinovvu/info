@@ -10,3 +10,6 @@ xtrabackup from percona
 
 
 more var/lib/xtrabackup_info
+
+# create backup
+mysqldump -u root -p adiq > /home/skorpion/1.Soft/0.Projects/2.adiq/1.dumps/mysql/adiq20210707.sql

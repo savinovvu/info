@@ -1,0 +1,19 @@
+#start with runner, test - stage name
+gitlab-runner exec docker \
+--docker-privileged \
+--env CI_COMMIT_REF_SLUG="master" \
+--env CI_REGISTRY_IMAGE=localhost \
+--env CI_PROJECT_NAME="docker-helm-kubectl" "test"
+
+gitlab-runner exec docker \
+--docker-privileged \
+--env CI_COMMIT_REF_SLUG="master" \
+--env CI_REGISTRY_IMAGE=localhost \
+--env CI_PROJECT_NAME="dmp-isolation-index" \
+"build"
+
+
+
+amd64
+curl -LJO "https://gitlab-runner-downloads.s3.amazonaws.com/latest/deb/gitlab-runner_amd64.deb"
+dpkg -i gitlab-runner_amd64.deb

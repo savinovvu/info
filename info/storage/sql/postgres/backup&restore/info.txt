@@ -1,0 +1,3 @@
+#create dump
+
+pg_dump website > /home/skorpion/1.Soft/0.Projects/2.adiq/1.dumps/postgres/website20210610

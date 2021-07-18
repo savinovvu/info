@@ -1,0 +1,7 @@
+conda -V
+
+
+conda create -n dmp-harvest python=3.8 anaconda
+
+conda activate dmp-harvest
+conda deactivate

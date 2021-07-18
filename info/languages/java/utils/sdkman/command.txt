@@ -3,7 +3,11 @@ https://sdkman.io/jdks#AdoptOpenJDK
 
 sdk list java
 
-sdk install java 8.0.252-open
+sdk install java 8.0.265-open
 
-sdk use java 8.0.252-open - with this terminal
-sdk default java 8.0.252-open - all terminals
+sdk use java 8.0.265-open - with this terminal
+sdk default java 8.0.265-open - all terminals
+
+sdk use java 11.0.7-open - with this terminal
+sdk default java 11.0.7-open - all terminals
+sdk default java 13.0.2-open - all terminals

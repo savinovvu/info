@@ -1,0 +1,2 @@
+#current dir
+project_dir=$(shell pwd)
