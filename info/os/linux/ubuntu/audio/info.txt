@@ -1,0 +1,2 @@
+#virtual output (for example hdmi and line output)
+pactl load-module module-combine-sink

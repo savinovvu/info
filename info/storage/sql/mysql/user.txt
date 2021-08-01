@@ -8,9 +8,11 @@ create user user_name@'localhost' identified with mysql_native_password By 'pass
 
 #user for any ip, but not localhost
 create user user_name@'%' identified with mysql_native_password By 'password';
+create user beranked@'%' identified with mysql_native_password By 'beranked';
 
 grant all privileges on database_name.* to user_name@'localhost';
 grant all privileges on *.* to user_name@'localhost' IDENTIFIED BY 'password';
+grant all privileges on *.* to beranked@'localhost' IDENTIFIED BY 'beranked';
 
 #before 5.7
 flush privileges;
