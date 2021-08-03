@@ -1,3 +1,0 @@
-# fix message for last pushed commit
-git commit --amend -m "new commit message"
-git push --force

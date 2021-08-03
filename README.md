@@ -1,7 +1,7 @@
 ### GIT
 1. [Squash](./info/tools/git/squash.txt)
 1. [Edit commit](./info/tools/git/git-edit.txt)
-1. [Edit last commit message](./info/tools/git/change-message-last-commit.txt)
+1. [Edit last commit message](./info/tools/git/change-message-last-commit.md)
 
 ### Docker
 
