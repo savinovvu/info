@@ -4,13 +4,10 @@ docker build -t germes/mysql -f mysql.dockerfile
 #without cache
 docker build -t germes/mysql -f mysql.dockerfile --no-cache=true
 
-# from root dockerfile
-docker build .
-
 # if file system: rootfolder/src/main/resources/docker/admin.dockerfile
 # from rootfolder for src, .dockerignore move to rootfolder
 docker build –f src/main/resources/docker/admin.dockerfile .
 
 
-
- #docker -t app-tmp build -f infrastructure/app/project-gradle.dockerfile
+ 
+##### [HOME](./../../../../../README.md)
