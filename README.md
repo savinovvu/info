@@ -1,3 +1,4 @@
+# Knowledge base
 ### GIT
 1. [Squash](./info/tools/git/squash.md)
 1. [Edit commit](./info/tools/git/git-edit.md)
