@@ -1,6 +1,6 @@
 ### Docker
 
-1. [Run with bash](./info/virtual/docker/commands/docker/start_with_settings/cli.txt)
+1. [Run with bash](info/virtual/docker/commands/start_with_settings/cli.txt)
 
 ### GIT
 1. [Squash](./info/tools/git/squash.txt)

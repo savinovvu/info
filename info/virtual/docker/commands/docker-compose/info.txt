@@ -4,7 +4,7 @@ docker-compose config
 # stop docker compose
 docker-compose down
 
-# background flask -d
+# background
 docker-compose up -d
 
 #logs from all containers

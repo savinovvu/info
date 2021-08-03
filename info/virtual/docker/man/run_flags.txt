@@ -22,4 +22,4 @@ docker run -it -v d:/Project/target:/var/lib/jetty/webapps -p 8080:8080 --name=a
 
 docker run -it --rm -v "d:\Project":/opt/maven -w /opt/maven maven:3-jdk-9-slim mvn clean install
 
-docker run -it --rm -v "d:\Project":/home/gradle/project -w /home/gradle/project gradle:4.4-jdk9 gradle clean insta
+docker run -it --rm -v "d:\Project":/home/gradle/project -w /home/gradle/project gradle:4.4-jdk9 gradle clean install
