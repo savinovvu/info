@@ -16,12 +16,14 @@
 1. [ERRORS & LOGS](info/virtual/k8s/commands/2.errors&logs/errors&logs.md)
 1. [HELM & Context](info/virtual/k8s/commands/1.helm&context/info.md)
 
-
 ### NETWORK
 1. [curl](./info/network/curl/curl.md)
 1. [echo](./info/network/echo/echo_network.md)
 
 
+### LINUX
+
+1. [Folder Structure ](info/os/linux/x.common/2.folder_structure/1.folder_structure.md)
 
 ## ====== Another ======
 ###### Vagrant
