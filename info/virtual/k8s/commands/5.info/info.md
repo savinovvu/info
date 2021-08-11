@@ -11,4 +11,10 @@ kubectl describe resourcequotas -n nameSpaceName
 ```
 
 
+##### see all objects
+```shell script
+kubectl get pods --all-namespaces
+```
+
+
 ##### [HOME](./../../../../../README.md)

@@ -14,7 +14,7 @@ docker run -i -t messenger-test
 ```shell script
 docker run -it postgres-container-name psql -U postgres
 
-docker run -it --entrypoint /bin/bash 1ac18694b0a4
+docker run -it --entrypoint /bin/bash be3d1060bbd8
 
 ```
 
