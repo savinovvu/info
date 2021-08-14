@@ -1,9 +1,0 @@
-
-################################ LAUNCH
-
-minikube version
-
-#start
-minikube start --wait=false
-
-

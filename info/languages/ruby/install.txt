@@ -2,6 +2,7 @@ asdf plugin-add ruby
 asdf install ruby 2.5.1
 asdf local ruby 2.5.1
 gem install bundler -v 1.17.3   (from gemfile)
+gem install bundler -v 2.1.2   (from gemfile)
 
 gem list bundle
 

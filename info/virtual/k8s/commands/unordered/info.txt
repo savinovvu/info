@@ -1,91 +1,10 @@
-############################ INFO
-
-# check api supports for deployment
-kubectl api-resources | grep deployment
-
-# replication controller
-kubectl get rc
-
-# pods
-kubectl get pods
-
-# services
-kubectl get services
-
-#all
-kubectl get all
-
-#watch with namespace
-watch kubectl get deployments,pods,services --namespace=logs
-
-# extends info
-kubectl get pods -o wide
-
-# namespaces
-kubectl get namespaces
-
-# CPU, MEMORY
-kubectl top node
-kubectl top pod
-
-#cluster info
-kubectl cluster-info dump
-kubectl config view
-
-kubectl config get-contexts
-
 ############################## LAUNCH
 
-#test start
-kubectl cluster-info
 
-#view nodes
-kubectl get nodes
-
-# create pods
-kubectl create deployment first-deployment --image=katacoda/docker-http-server:latest
-
-# view pods
-kubectl get pods
-
-# start pod
-kubectl expose deployment first-deployment --port=80 --type=NodePort
-
-# enable dashboard
-minikube addons enable dashboard
-
-# deploy with yaml
-kubectl apply -f /opt/kubernetes-dashboard.yaml
-
-#monitoring pods status
-kubectl get pods -n kube-system  -w
-
-# run with kubectl
-kubectl run http --image=katacoda/docker-http-server:latest --replicas=1
-
-# info about deployments
-kubectl get deployments
-
-# describe
-kubectl describe deployment http
-
-kubectl expose deployment http --external-ip="172.17.0.48" --port=8000 --target-port=80
-
-curl http://172.17.0.48:8000
-
-############################ KUBEADM
-
-kubeadm init --token=102952.1a7dd4cc8d1f4cc5 --kubernetes-version $(kubeadm version -o short)
-
-kubeadm token list
 
 ########################### NETWORK INFO
 kubectl get svc
 
-
-
-########################### DELETE
-kubectl delete pod pod-name
 
 
 ############################ NAMESPACES
