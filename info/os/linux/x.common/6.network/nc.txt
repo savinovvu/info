@@ -1,0 +1,7 @@
+# netcat
+
+#listen
+nc -l 5555
+
+#send
+nc localhost 5555

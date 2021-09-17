@@ -17,5 +17,11 @@ vagrant halt
 ```shell script
 vagrant destroy
 ```
+```
+
+##### ssh
+```shell script
+vagrant ssh
+```
 
 ##### [HOME](./../../../README.md)
