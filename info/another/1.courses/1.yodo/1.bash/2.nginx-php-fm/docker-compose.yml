@@ -1,9 +1,9 @@
 version: '3.7'
 services:
 
-  srv:
+  ubuntu-20.04:
     privileged: true
-    container_name: sys-test3
+    container_name: bash2container
     build:
       context: .
       dockerfile: ./Dockerfile
@@ -11,8 +11,3 @@ services:
     volumes:
       - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
       - "/home/skorpion/1.Soft/0.Projects/1.MyProjects/info/info/another/1.courses/1.yodo/1.bash/2.nginx-php-fm/src:/home/root"
-
-
-        #    command: ["start", "--swarmOverlayNetwork", "STACK_zalenium", "--videoRecordingEnabled", "false", "--privileged"]
-#    docker run --name sys-test2 --rm --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro --net=host 2-ubuntu-systemd
-
