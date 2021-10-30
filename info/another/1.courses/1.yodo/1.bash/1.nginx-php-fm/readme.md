@@ -1,13 +1,13 @@
-To execute:
+To start docker container:
 ```shell
 make 1-up
 ```
 
-To include to docker container:
+To go to docker container terminal:
 ```shell
 make 1-in
 ```
-Into docker container terminal:
+To start script into docker container:
 ```shell
 make run
 ```
