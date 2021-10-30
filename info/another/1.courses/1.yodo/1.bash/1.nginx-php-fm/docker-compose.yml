@@ -3,11 +3,11 @@ services:
 
   ubuntu-20.04:
     privileged: true
-    container_name: bash2container
+    container_name: bash1container
     build:
       context: .
       dockerfile: ./Dockerfile
     network_mode: host
     volumes:
       - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
-      - "${TOP}/2.nginx-php-fm/src:/home/root"
+      - "${TOP}/1.nginx-php-fm/src:/home/root"
