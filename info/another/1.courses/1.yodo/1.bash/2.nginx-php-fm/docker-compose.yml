@@ -10,4 +10,4 @@ services:
     network_mode: host
     volumes:
       - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
-      - "/home/skorpion/1.Soft/0.Projects/1.MyProjects/info/info/another/1.courses/1.yodo/1.bash/2.nginx-php-fm/src:/home/root"
+      - "${TOP}/2.nginx-php-fm/src:/home/root"

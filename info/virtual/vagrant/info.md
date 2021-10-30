@@ -17,7 +17,6 @@ vagrant halt
 ```shell script
 vagrant destroy
 ```
-```
 
 ##### ssh
 ```shell script
