@@ -1,0 +1,12 @@
+https://crontab.guru/
+
+# 23:05
+05 23 * * * /path/to/script.sh
+
+
+#every 10 min
+*/10 * * * * /scripts/monitor.sh
+
+# every sunday 17:00
+0 17 * * sun  /scripts/script.sh
+
