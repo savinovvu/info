@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+
+  ubuntu-20.04:
+    privileged: true
+    container_name: bash2container
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    network_mode: host
+    volumes:
+      - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
+      - "${TOP}/2.nginx-php-fm-telegram/src:/home/root"
+#      - "${TOP}/2.nginx-php-fm-telegram/crontab:/var/spool/cron/crontabs/root"
