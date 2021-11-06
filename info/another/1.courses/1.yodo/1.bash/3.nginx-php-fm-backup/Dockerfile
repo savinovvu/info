@@ -13,4 +13,8 @@ RUN apt update && apt upgrade -y && \
 
 WORKDIR /home/root
 
+RUN alias ll='ls -lrth' && \
+    alias mksh='echo "#!/bin/bash" > script.sh && chmod 777 script.sh && nano script.sh' && \
+    alias bckp='echo "Как назовем бекап?" && read dir && sudo rsync -av $(pwd)/ /root/backup_$dir/ && echo "Бекап папки $(pwd) сохранен в /root/backup_$dir/" && ls -l /root/ | grep $dir'
+
 CMD ["/lib/systemd/systemd"]
