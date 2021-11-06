@@ -11,3 +11,4 @@ services:
     volumes:
       - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
       - "${TOP}/2.nginx-php-fm-telegram/src:/home/root"
+#      - "${TOP}/2.nginx-php-fm-telegram/crontab:/var/spool/cron/crontabs/root"
