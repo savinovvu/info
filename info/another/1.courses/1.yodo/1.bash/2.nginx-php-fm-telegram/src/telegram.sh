@@ -20,9 +20,3 @@ curl -sS -i --max-time 30 \
 
 
 
-
-#curl -sS -i --max-time 30 \
-#        --header 'Content-Type: application/json' \
-#        --request 'POST' \
-#        --data '{"chat_id": "454484618", "text": "TEXT"}' \
-#        "https://api.telegram.org/bot2143795323:AAEFF_8jaHR_2fNm4UvgpQoV5LDXFTmoq5Y/sendMessage"
