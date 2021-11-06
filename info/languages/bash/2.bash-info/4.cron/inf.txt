@@ -10,3 +10,4 @@ https://crontab.guru/
 # every sunday 17:00
 0 17 * * sun  /scripts/script.sh
 
+

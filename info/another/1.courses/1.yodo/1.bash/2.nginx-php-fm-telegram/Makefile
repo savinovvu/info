@@ -14,3 +14,8 @@
 2-in: SHELL:=/bin/bash
 2-in:
 	docker exec -it bash2container bash
+
+.PHONY: 2-rm
+2-rm: SHELL:=/bin/bash
+2-rm:
+	docker rm bash2container

@@ -19,10 +19,11 @@ if [[ $nginxstatus == 'running' ]]
   then
     echo -en  "${WHITE} ${BGGREEN} Веб сервер работает ${NORMAL}\n"
   else
-    $tg "Nginx не работает " > /dev/null
+    echo -en "${WHITE} ${BGRED} nginx не работает ${NORMAL}\n"
     systemctl restart nginx
     sleep 1
-    $tg " Статус Nginx после перезапуска: $(systemctl status nginx | grep -Eo "running|dead|failed")" > /dev/null
+    echo -en  "${WHITE} ${BGGREEN} Стутс Nginx после перезапуска: $(systemctl status nginx | grep -Eo "running|dead|failed") ${NORMAL}\n"
+    echo $(curl -I localhost | grep OK)
 fi
 
 
@@ -31,9 +32,9 @@ if [[ $phpfpmstatus == 'running' ]]
     then
         echo -en  "${WHITE} ${BGGREEN} php7.2-fpm работает ${NORMAL}\n"
     else
-        $tg "Статус php7.2-fpm $phpfpmstatus Пробуем перезапустить."
+        echo -en "${WHITE} ${BGRED} Статус php7.2-fpm $phpfpmstatus Пробуем перезапустить. ${NORMAL}\n"
         systemctl restart php7.2-fpm # Перезапуск php7.2-fpm
         sleep 1 #  Ожидаем 1 секунду, чтобы php7.2-fpm точно запустился.
 
-        $tg "Статус php7.2-fpm после перезапуска $(systemctl status php7.2-fpm | grep -Eo "running|dead|failed")"
+        echo -en "${WHITE} Статус php7.2-fpm после перезапуска $(systemctl status php7.2-fpm | grep -Eo "running|dead|failed") ${NORMAL}\n"
 fi
