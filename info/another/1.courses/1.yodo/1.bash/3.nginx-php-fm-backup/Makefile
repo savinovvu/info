@@ -19,3 +19,9 @@
 3-rm: SHELL:=/bin/bash
 3-rm:
 	docker rm bash2container
+
+
+# generate files: cd /home/root/app/dir1 && /home/root/file_generator.sh
+# generate files: cd /home/root/app/dir2 && /home/root/file_generator.sh
+# generate files: cd /home/root/app/dir3 && /home/root/file_generator.sh
+# generate files: cd /home/root/app/dir4 && /home/root/file_generator.sh

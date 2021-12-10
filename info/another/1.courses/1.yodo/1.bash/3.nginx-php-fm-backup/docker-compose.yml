@@ -11,4 +11,5 @@ services:
     volumes:
       - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
       - "${TOP}/3.nginx-php-fm-backup/src:/home/root"
+#      - "${TOP}/3.nginx-php-fm-backup/src:/home/root/.bashrc"
 #      - "${TOP}/3.nginx-php-fm-backup/crontab:/var/spool/cron/crontabs/root"
