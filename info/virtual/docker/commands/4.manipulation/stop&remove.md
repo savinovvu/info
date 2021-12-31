@@ -15,7 +15,7 @@ docker rmi $(docker images -a -q)
 
 ### Remove unnamed images
 ```shell script
-docker rmi $(docker images -f dangling=true -q)
+docker rmi $(docker images -f dangling=true -q) --force
 ```
 
 ### Remove images by repository

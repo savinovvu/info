@@ -1,0 +1,25 @@
+Для ubuntu:
+
+admin:///etc/postgresql/10/main/postgresql.conf
+
+456      log_statement = 'all'		 none →all
+
+431      log_duration = on			off →on
+
+416      log_min_duration_statement = 1       - 1 → 1 (1 логировать запросы от 1 миллисекунды, можно установить 0)
+
+
+356      log_directory = '/home/naglezh/postgresLog'       'log' → /home/naglezh/postgresLog — создать директорию
+
+358      log_filename = 'postgresql-%Y-%m-%d_%H%M%S.log'  — раскомментировать
+
+350 	 logging_collector = on 		off → on
+
+
+
+
+по умолчанию логи тут
+/var/log/postgresql/
+
+
+аккуратнее с директорией, при ошибках postgres не запуститься - ошибка сокета

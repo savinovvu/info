@@ -46,3 +46,8 @@ ls -l /proc/ | wc -l
 
 # мои процессы посмотреть количество
 ls -ld /proc/* | grep skorpion | wc -l
+
+
+# смотреть переменные окружения процесса
+cat /proc/7850/environ | tr '\0' '\n'
+cat /proc/[process ID]/environ | tr '\0' '\n'

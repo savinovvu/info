@@ -1,1 +1,21 @@
 simple java console
+
+exec java \
+    -server \
+    -XX:+UseContainerSupport \
+    -XX:InitialRAMPercentage=75.0 \
+    -XX:MaxRAMPercentage=85.0 \
+    -XX:MinRAMPercentage=70.0 \
+    -XX:+UseG1GC \
+    -XX:MaxGCPauseMillis=100 \
+    -XX:+UseStringDeduplication \
+    $JAVA_OPTS \
+    -jar \
+    app.jar \
+    $@
+
+ENV JAVA_OPTS="-XX:+UseG1GC -XX:MaxGCPauseMillis=100"
+
+-XX:+UseG1GC -XX:MaxGCPauseMillis=300 -Xms6G -Xmx6G
+
+-XX:+UseConcMarkSweepGC -XX:NewRatio=5 -Xms6G -Xmx6G
