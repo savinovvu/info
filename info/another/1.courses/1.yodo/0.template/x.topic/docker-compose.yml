@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+
+  ubuntu-20.04:
+    privileged: true
+    container_name: bash1container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    network_mode: host
+    volumes:
+      - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
+      - "${TOP}/x.topic/src:/home/root"
