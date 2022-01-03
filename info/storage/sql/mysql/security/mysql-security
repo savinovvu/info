@@ -1,0 +1,8 @@
+https://dba.stackexchange.com/questions/143564/running-mysql-without-password-and-default-user-in-ubuntu
+
+It is possible if you add default username and Password to my.cnf
+
+[client]
+
+ user            = root
+ password        = yourpass
