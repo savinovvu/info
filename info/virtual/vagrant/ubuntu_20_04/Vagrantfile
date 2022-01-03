@@ -1,0 +1,30 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+    config.vm.provider :libvirt do |libvirt|
+        libvirt.driver = "virtualbox"
+    end
+    config.vm.box = "generic/ubuntu2004"
+    config.vm.box_version = "3.1.16"
+    config.vm.provision:shell, inline: <<-SHELL
+        echo "root:rootroot" | sudo chpasswd
+        sudo timedatectl set-timezone Asia/Ho_Chi_Minh
+    SHELL
+
+    config.vm.define "ubuntu20.04" do |ubuntu|
+        ubuntu.vm.hostname = "ubuntu20.04"
+    end
+
+    config.vm.provision:shell, path: "bootstrap.sh"
+end
+
+# (base) skorpion@skorpion-HP-ProBook-470-G5:~/1.Soft/0.Projects/1.MyProjects/info/info/virtual/vagrant/ubuntu_20_04$ VBoxManage --version
+# WARNING: The character device /dev/vboxdrv does not exist.
+#          Please install the virtualbox-dkms package and the appropriate
+#          headers, most likely linux-headers-generic.
+#
+#          You will not be able to start VMs until this problem is fixed.
+# 6.1.16_Ubuntur140961
