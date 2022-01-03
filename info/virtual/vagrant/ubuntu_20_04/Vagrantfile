@@ -10,8 +10,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.box = "generic/ubuntu2004"
     config.vm.box_version = "3.1.16"
     config.vm.provision:shell, inline: <<-SHELL
-        echo "root:rootroot" | sudo chpasswd
-        sudo timedatectl set-timezone Asia/Ho_Chi_Minh
+        echo "root: " | sudo chpasswd
+        sudo timedatectl set-timezone Asia/Irkutsk
     SHELL
 
     config.vm.define "ubuntu20.04" do |ubuntu|
