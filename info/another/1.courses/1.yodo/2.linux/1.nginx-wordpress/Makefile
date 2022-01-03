@@ -1,16 +1,15 @@
 
+.PHONY: 1-up
+1-up: SHELL:=/bin/bash
+1-up:
+	docker-compose -f ./1.nginx-wordpress/docker-compose.yml up --build
 
-.PHONY: x-up
-x-up: SHELL:=/bin/bash
-x-up:
-	docker-compose -f ./1.nginx-php-fm/docker-compose.yml up --build
+.PHONY: 1-destroy
+1-destroy: SHELL:=/bin/bash
+1-destroy:
+	docker-compose -f ./1.nginx-wordpress/docker-compose.yml down
 
-.PHONY: x-destroy
-x-destroy: SHELL:=/bin/bash
-x-destroy:
-	docker-compose -f ./1.nginx-php-fm/docker-compose.yml down
-
-.PHONY: x-in
-x-in: SHELL:=/bin/bash
-x-in:
-	docker exec -it bash1container bash
+.PHONY: 1-in
+1-in: SHELL:=/bin/bash
+1-in:
+	docker exec -it $(shell docker ps -q) bash
