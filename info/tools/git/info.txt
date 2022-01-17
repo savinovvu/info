@@ -10,6 +10,9 @@ git describe branch_name
 
 
 ==================== GIT SSH
+#generate
+ssh-keygen -t rsa
+
 #before
 git remote -v
 https://github.com/savinovvu/info.git
