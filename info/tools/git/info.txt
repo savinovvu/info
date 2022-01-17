@@ -7,3 +7,12 @@ git tag tag_name commit_hash
 #distance commit to tag
 git describe commit_hash
 git describe branch_name
+
+
+==================== GIT SSH
+#before
+git remote -v
+https://github.com/savinovvu/info.git
+
+#execute
+git remote set-url origin git@github.com:savinovvu/info.git
