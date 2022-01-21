@@ -11,3 +11,14 @@ mariaDbPassword = ieyah7Aew6oom8ohsooghies
 
 
 ssh root@192.168.0.77
+
+create database wp_mysitedb;
+
+CREATE USER 'wpuser1'@'localhost' IDENTIFIED BY 'samplepassword';
+
+GRANT ALL PRIVILEGES ON  wp_mysitedb. * TO 'wpuser1'@'localhost';
+
+FLUSH PRIVILEGES;
+
+wordpress-password: 1
+

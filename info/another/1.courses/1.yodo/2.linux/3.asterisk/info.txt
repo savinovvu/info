@@ -1,0 +1,1 @@
+wget http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/asterisk-13.32.0.tar.gz
