@@ -1,0 +1,2 @@
+asdf plugin-add gradle
+asdf list all gradle
