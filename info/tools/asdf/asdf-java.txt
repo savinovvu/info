@@ -1,0 +1,11 @@
+asdf plugin-add java
+
+asdf list java
+
+asdf list all java
+
+asdf install java adoptopenjdk-openj9-large_heap-8.0.282+8.openj9-0.24.0
+asdf local java adoptopenjdk-openj9-large_heap-8.0.282+8.openj9-0.24.0
+
+asdf install java openjdk-17.0.2
+asdf local java openjdk-17.0.2
