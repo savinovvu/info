@@ -61,7 +61,12 @@ install_tools() {
 setup_root_login() {
     sudo sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
     sudo systemctl restart ssh
-    sudo echo "root:rootroot" | chpasswd
+    sudo echo "root: " | chpasswd
+}
+
+setup_addition_tools() {
+    sudo apt -y install mc
+    sudo apt -y install net-tools
 }
 
 setup_welcome_msg() {
@@ -76,6 +81,7 @@ main() {
     resolve_dns
     install_openssh
     setup_root_login
+    setup_addition_tools
     setup_welcome_msg
 }
 
