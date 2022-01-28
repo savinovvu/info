@@ -5,3 +5,26 @@ ssh username@host
 
 # port forwarding, server port to localhost
 ssh url_remote_server.ru -L 5005:127.0.0.1:5005
+
+
+
+### port forwarding from ~/.ssh/config
+ #1. add lines to config
+Host host
+    HostName 192.0.0.2
+    Port 22
+    LocalForward 7001 remote_host:7000
+
+#2. command
+ssh -N host
+
+
+####
+
+В ~/.ssh/config можно настроить persisted сокет для того, чтобы ssh-подключение к конкретному хоступ переиспользовалось.
+Host host
+    HostName 192.0.0.2
+    ControlMaster auto
+    ControlPath ~/.ssh/sockets/%r@%h:%p
+    ControlPersist 600
+    KeepAlive yes
