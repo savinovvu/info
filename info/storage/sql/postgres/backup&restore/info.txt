@@ -1,6 +1,6 @@
 #create dump
 
-pg_dump website > /path/to/creating/dump
+pg_dump -U postgres website > /path/to/creating/dump
 
 #restore dump
 psql -U username -d website < /path/to/existing/dump
