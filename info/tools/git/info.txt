@@ -19,3 +19,7 @@ https://github.com/savinovvu/info.git
 
 #execute
 git remote set-url origin git@github.com:savinovvu/info.git
+
+
+# bisect for mistake search
+git bisect
