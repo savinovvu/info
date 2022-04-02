@@ -9,3 +9,11 @@ asdf local java adoptopenjdk-openj9-large_heap-8.0.282+8.openj9-0.24.0
 
 asdf install java openjdk-17.0.2
 asdf local java openjdk-17.0.2
+
+asdf install java adoptopenjdk-8.0.312+7
+asdf global java adoptopenjdk-8.0.312+7
+
+#eclipse temurin
+asdf local java adoptopenjdk-17.0.2+8
+
+/home/skorpion/.asdf/installs/java/

@@ -1,0 +1,18 @@
+set JAVA_HOME
+
+If you use tools that depend on JAVA_HOME being set, you may need this into your .bashrc, right after any asdf related stuff:
+
+function asdf_update_java_home {
+  asdf current java 2>&1 > /dev/null
+  if [[ "$?" -eq 0 ]]
+  then
+      export JAVA_HOME=$(asdf where java)
+  fi
+}
+
+function prompt_command {
+#  __vte_prompt_command   put here whatever previous PROMPT_COMMAND was there before
+  asdf_update_java_home
+}
+
+export PROMPT_COMMAND=prompt_command
