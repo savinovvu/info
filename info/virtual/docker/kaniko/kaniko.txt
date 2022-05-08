@@ -1,0 +1,14 @@
+
+docker run -i --rm --name="test" -v $(pwd):/test --entrypoint /kaniko/executor gcr.io/kaniko-project/executor:v1.5.0-debug -v debug --context /test --dockerfile /test/Dockerfile --no-push
+
+
+docker exec -it test bash
+
+
+/kaniko/executor \
+      --context /test \
+      --dockerfile /test/Dockerfile \
+      --cache=false \
+      --cleanup \
+      --use-new-run \
+      --no-push

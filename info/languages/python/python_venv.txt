@@ -2,3 +2,8 @@ python3 -m venv
 
 
 source deactivate
+
+usage:
+virtualenv venv
+source venv/bin/activate
+pip install -r requirements.txt

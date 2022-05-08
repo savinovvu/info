@@ -55,3 +55,12 @@ sh idea.sh & disown
 
 # текущая загрузка дисковой подсистемы
 iostat -dx
+
+
+# заморозить обновление пакета freeze package
+sudo apt-mark hold имя_пакета
+
+
+# разморозить обновление пакета unfreeze package
+sudo apt-mark unhold имя_пакета
+

@@ -1,0 +1,4 @@
+
+# example byte search in postgres
+    @Query(nativeQuery = true, value = "SELECT * FROM users WHERE users.realmsEnum && CAST(?1 as VARCHAR ARRAY ) ")
+    Page<User> findAllByRealmsIn(String realmsEnum, Pageable page: );
