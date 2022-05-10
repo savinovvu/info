@@ -16,3 +16,6 @@ mysqldump -u root -p adiq > /path/to/creating/dump.sql
 
 # restore backup
 mysql -u root -p adiq < /path/to/existing/dump.sql
+
+# restore to mysql in docker
+docker exec -i mysql sh -c 'exec mysql -uroot -proot db_name' < /path/to/dump
