@@ -1,9 +1,12 @@
 python3 -m venv
 
 
-source deactivate
 
-usage:
+# activate
 virtualenv venv
 source venv/bin/activate
 pip install -r requirements.txt
+
+
+#venv deactivate
+deactivate
