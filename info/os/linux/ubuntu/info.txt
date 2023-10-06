@@ -32,6 +32,10 @@ free -m
 # see mount directory
 df -h
 
+
+# see directory volume # размер папки
+sudo du -sh *
+
 # see started processed
 ps aux
 
@@ -64,3 +68,8 @@ sudo apt-mark hold имя_пакета
 # разморозить обновление пакета unfreeze package
 sudo apt-mark unhold имя_пакета
 
+I'm so sorry, I'll get you a new glass
+Here you are, Oh but wait, this glass is dirty
+Yes please, How much is that
+Of course, Would you like ice and a slice of fresh orange
+I'd like to order an orange juice

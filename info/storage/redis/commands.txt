@@ -1,5 +1,7 @@
 redis-cli help
 
+redis-cli -h redis15.localnet.org -p 6390 PING
+
 #loop 10 times with incr
 redis-cli -r 10 incr counter
 

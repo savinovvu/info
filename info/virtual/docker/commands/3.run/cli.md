@@ -20,3 +20,8 @@ docker run -it --entrypoint /bin/bash be3d1060bbd8
 
 
 ##### [HOME](./../../../../../README.md)
+
+pip 22.0.4 from /usr/local/lib/python3.8/site-packages/pip (python 3.8)
+Python 3.8.16
+
+${PIP} install --upgrade pip==22.0.4

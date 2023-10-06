@@ -1,0 +1,42 @@
+---
+- name: Loops Playbook
+  hosts: linux3
+  become: yes
+
+  vars:
+    source_file: ./Myfile
+    destin_file: /var/www/html
+
+  tasks:
+    - name: Say hello to all
+      debug: msg="Hello {{ item }}"
+      loop:
+        - "Vasya"
+        - "Petya"
+        - "Masha"
+        - "Olya"
+
+    - name: Loop until example
+      shell: echo -n Z >> myfile.txt && cat myfile.txt
+      register: output
+      delay: 2
+      retries: 10
+      until: output.stdout.find("ZZZZ") == false
+
+    - name: Print Final Output
+      debug:
+        var: output.stdout
+
+    - name: Install many packages
+      yum: name={{ item }} state=installed
+      loop:
+        - python
+        - tree
+        - mysql-client
+
+
+
+
+  handlers:
+    - name: Restart Apache
+      service: name=httpd state=restarted

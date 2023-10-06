@@ -14,3 +14,7 @@ grep -v ^#
 
 И то и другое
 grep -v ^$ | grep -v ^#
+
+
+поиск по папке
+grep -nr 'yourString*' .

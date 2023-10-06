@@ -49,5 +49,5 @@ ls -ld /proc/* | grep skorpion | wc -l
 
 
 # смотреть переменные окружения процесса
-cat /proc/7850/environ | tr '\0' '\n'
-cat /proc/[process ID]/environ | tr '\0' '\n'
+cat /proc/7850/environ | tr '\0' '\n' | sort
+cat /proc/[process ID]/environ | tr '\0' '\n' | sort

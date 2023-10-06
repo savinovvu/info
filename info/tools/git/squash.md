@@ -1,6 +1,6 @@
 #### цифра это количество коммитов
 ```shell script
-git rebase -i HEAD~5
+git rebase -i HEAD~8
 ```
 
 #### первому оставить pick

@@ -1,0 +1,1 @@
+spring boot после 2.3ей версии не включает spring-boot-starter-validation, надо включить вручную

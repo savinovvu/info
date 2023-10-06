@@ -1,0 +1,36 @@
+ansible-doc -l
+
+ansible -i hosts.txt all -m ping
+ansible all -m ping
+ansible-inventory --list
+ansible-inventory --graph
+
+#info
+ansible staging -m setup
+
+#commands
+ansible staging -m shell -a "uptime"
+
+# commands with debug info
+ansible staging -m shell -a "uptime" -vvv
+
+
+# copy file
+ansible all -m copy -a "src=privet.txt dest=/home/v.savinov mode=777"
+
+# copy with sudo
+ansible all -m copy -a "src=privet.txt dest=/home/v.savinov mode=777" -b
+
+
+#delete
+ansible staging -m file -a "path=/home/v.savinov/privet.txt state=absent"
+
+#download by url
+ansible all -m get_url -a "url=link dest=/home/v.savinov"
+
+#install/remove program
+ansible all -m yum -a "name=stress state=latest" -b
+ansible all -m yum -a "name=stress state=remove" -b
+
+# start playbook
+ansible-playbook playbook1.yml

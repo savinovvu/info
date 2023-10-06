@@ -1,12 +1,35 @@
 asdf plugin-add ruby
-asdf install ruby 2.5.1
-asdf local ruby 2.5.1
+asdf local ruby 3.1.2
 gem install bundler -v 1.17.3   (from gemfile-lock)
 gem install bundler -v 2.1.2   (from gemfile-lock)
 gem install bundler -v 1.16.3   (from gemfile-lock BUNDLED WITH)
 gem install bundler -v 1.16.5   (from gemfile-lock BUNDLED WITH)
 gem install bundler -v 2.1.4   (from gemfile-lock BUNDLED WITH)
+gem install bundler -v 2.3.26   (from gemfile-lock BUNDLED WITH)
+gem install bundler -v 2.4.6   (from gemfile-lock BUNDLED WITH)
 
 gem list bundle
 
 bundle install
+
+bundle exec explico deploy --branch=PRFLR-8902-new-jvm-motion staging --local-tree
+
+bundle exec explico deploy --branch=PRFLR-8675-deploys-notifications staging_mf --local-tree
+
+@notify subscribe dmp-staging-dmp-airflow-deploy
+@notify subscribe dmp-staging-dmp-profiler-deploy
+
+
+[PRFLR-8675] уведомления о деплое и ci
+
+dmp-staging-dmp-profiler-deploy
+
+source "https://gems.fun-box.ru"  do
+  group :deploy do
+    gem "funbox-deploy", "~> 2.11.17", require: false
+  end
+end
+
+set :notify_workspace, 'kvantera_mm'
+
+bundle exec rake gem:push GEM=https://gems.funbox.io/funbox-deploy-dmp-1.2.0.gem

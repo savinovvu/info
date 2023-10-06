@@ -1,0 +1,55 @@
+---
+- name: install Apache und Upload my web page
+  hosts: all
+  become: yes
+
+  vars:
+    source_folder: ./folder
+    destin_folder: /var/www/html
+
+  tasks:
+    - name: Check and Print Linux version
+      debug: var="ansible_os_family"
+
+    - block: #============================== RedHat
+      when: ansible_os_family == "RedHat"
+        - name: install Apache Web Server for Redhat
+          yum: name=httpd state=latest
+
+        - name: Start server service for redhat
+          service: name=httpd state=started enabled=yes
+
+    - block: #============================== Debian
+      when: ansible_os_family == "Debian"
+        - name: install Apache Web Server for Debian
+          apt: name=apache2 state=latest
+
+        - name: Start server service for debian
+          service: name=apache2 state=started enabled=yes
+
+    - name: Generate INDEX.HTML file
+      template: src={{ source_folder}}/index.j2 dest={{ destin_folder }}/index.html mode=0555
+      notify:
+        - Restart Apache Redhat
+        - Restart Apache Debian
+
+
+    - name: Copy Homepage file to Web server
+          copy: src={{ source_folder}}/{{ item }} dest={{ destin_folder }} mode=0555
+          loop:
+            - "bahamas.png"
+            - "bulgaria.png"
+            - "jordan.png"
+            - "newzeland.png"
+      notify:
+        - Restart Apache Redhat
+        - Restart Apache Debian
+
+  handlers:
+    - name: Restart Apache Redhat
+      service: name=httpd state=restarted
+      when: ansible_os_family == "RedHat"
+
+    - name: Restart Apache Debian
+      service: name=apache2 state=restarted
+      when: ansible_os_family == "Debian"

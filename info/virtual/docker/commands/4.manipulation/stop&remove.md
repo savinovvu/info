@@ -13,7 +13,7 @@ docker rm -f $(docker ps -a -q)
 docker rmi $(docker images -a -q)
 ```
 
-### Remove unnamed images
+### Remove unnamed images / удалить не использованные образы
 ```shell script
 docker rmi $(docker images -f dangling=true -q) --force
 ```

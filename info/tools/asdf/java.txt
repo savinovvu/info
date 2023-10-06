@@ -15,5 +15,7 @@ asdf global java adoptopenjdk-8.0.312+7
 
 #eclipse temurin
 asdf local java adoptopenjdk-17.0.2+8
+asdf local java temurin-jre-17.0.8+7
+asdf local java temurin-17.0.8+7
 
 /home/skorpion/.asdf/installs/java/
