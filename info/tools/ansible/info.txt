@@ -34,3 +34,10 @@ ansible all -m yum -a "name=stress state=remove" -b
 
 # start playbook
 ansible-playbook playbook1.yml
+
+
+#create role
+ansible-galaxy init role_name
+
+#extra-vars
+ansible-playbook playbook6.yml --extra-var "MYHOSTS=PROD owner=DENIS"

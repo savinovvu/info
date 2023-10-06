@@ -1,0 +1,20 @@
+---
+
+- name: My playbook
+  hosts: all
+  become: yes
+
+  vars:
+    mytext: "Privet ot bla"
+
+  tasks:
+    - name: Ping test
+      ping:
+
+# compile time
+  - import: create_folders.yml
+
+# runtime
+  - include: create_files.yml mytext="Hello from Vancoover"
+
+
