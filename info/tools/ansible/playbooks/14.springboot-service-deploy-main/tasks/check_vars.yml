@@ -1,0 +1,30 @@
+---
+- name: "Check vars | Assert service_name is defined"
+  assert:
+    that:
+      - "service_name is defined"
+    msg: "service_name must be defined"
+
+- name: "Check vars | Assert service_version is defined"
+  assert:
+    that:
+      - "service_version is defined"
+    msg: "service_version must be defined"
+
+- name: "Check vars | Assert service_version is defined"
+  assert:
+    that:
+      - "service_version is defined"
+    msg: "service_version must be defined"
+
+- name: "Check vars | Assert service_user is defined"
+  assert:
+    that:
+      - "service_user is defined"
+    msg: "service_user must be defined"
+
+- name: "Check vars | Assert service_user_group is defined"
+  assert:
+    that:
+      - "service_user_group is defined"
+    msg: "service_user_group must be defined"

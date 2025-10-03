@@ -1,0 +1,55 @@
+---
+
+- name: My playbook
+  hosts: all
+  become: yes
+
+  vars:
+    mytext: "Privet ot bla"
+
+  tasks:
+    - name: Ping test
+      ping:
+
+  - name: Unregister Server from Load Balancer
+    shell: echo This server {{inventory_hostname}} was deregistered from our Load Balancer, node name is {{ansible nodename}} >> ./ansible/log.txt
+    delegate_to: 127.0.0.1
+
+
+  - name: Update my Database
+    shell: echo updating database...
+    run_once: true
+
+  - name: create file1
+    copy:
+      dest: /home/secret/file1.txt
+      content: |
+        Text Line1, in file1
+        Text Line2, in file1
+        Text Line3, {{mytext}}
+    delegate_to: linux3
+
+  - name: create file2
+    copy:
+      dest: /home/secret/file2.txt
+      content: |
+        Text Line1, in file2
+        Text Line2, in file2
+        Text Line3, {{mytext}}
+
+  # time in seconds
+  - name: Reboot my servers
+    shell: sleep 3 && reboot now
+    async: 1
+    pool: 0
+
+  - name: Wait till my server will come up online
+    wait_for:
+      host: "{{ inventory_hostname }}"
+      state: started
+      delay: 5
+      timeout: 40
+
+
+
+

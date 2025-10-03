@@ -1,0 +1,7 @@
+asdf plugin-add rust
+
+asdf list rust
+
+asdf list all rust
+
+asdf install rust 1.81.0

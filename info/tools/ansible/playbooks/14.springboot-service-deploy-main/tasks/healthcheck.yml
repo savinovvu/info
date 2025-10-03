@@ -1,0 +1,25 @@
+---
+- name: "Healthcheck | Wait for {{  service }} to be healthy on URLs {{ service_healthcheck_urls }}"
+  uri:
+    url: "{{ item }}"
+    method: GET
+    validate_certs: "{{ service_healthcheck_urls_validate_certs | default('no') }}"
+    status_code: 200
+  register: result
+  until: result.status == 200
+  retries: "{{ service_healthcheck_urls_retry_count }}"
+  delay: "{{ service_healthcheck_urls_retry_delay }}"
+  with_items: "{{ service_healthcheck_urls }}"
+  when: >
+    service_healthcheck_urls is defined and
+    service_as_a_service
+
+- name: "Healthcheck | Wait for {{  service_name }} to be healthy on TCP Ports {{ service_healthcheck_ports }}"
+  wait_for:
+    host: localhost
+    port: "{{ item }}"
+    timeout: "{{ service_healthcheck_ports_timeout }}"
+  with_items: "{{ service_healthcheck_ports }}"
+  when: >
+    service_healthcheck_ports is defined and
+    service_as_a_service

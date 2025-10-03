@@ -4,5 +4,9 @@ asdf list all gradle
 
 asdf install gradle 7.4.1
 asdf local gradle 7.4.1
+asdf install gradle 7.6.1
+asdf local gradle 7.6.1
+asdf install gradle 7.6.4
+asdf local gradle 7.6.4
 
 

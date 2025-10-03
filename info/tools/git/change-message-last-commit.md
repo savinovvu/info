@@ -1,6 +1,6 @@
 ##### fix message for last pushed commit
 ```shell script
-git commit --amend -m "[PRFRL-8938] увеличить таймаут редиса"
+git commit --amend -m "xxxx"
 git push --force
 ```
 

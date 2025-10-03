@@ -1,0 +1,9 @@
+---
+# handlers file for springboot-service-deploy
+- name: "Restart application"
+  service:
+    name: "{{ service_name | lower }}"
+    enabled: yes
+    state: restarted
+  become: true
+  when: service_as_a_service

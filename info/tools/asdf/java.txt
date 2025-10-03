@@ -1,4 +1,5 @@
 asdf plugin-add java
+asdf plugin-add ansible-base
 
 asdf list java
 
@@ -7,10 +8,14 @@ asdf list all java
 asdf install java adoptopenjdk-openj9-large_heap-8.0.282+8.openj9-0.24.0
 asdf local java adoptopenjdk-openj9-large_heap-8.0.282+8.openj9-0.24.0
 
-asdf install java openjdk-17.0.2
-asdf local java openjdk-17.0.2
+asdf install java temurin-21.0.8+9.0.LTS
+asdf install java temurin-17.0.8+7
+asdf set java temurin-21.0.8+9.0.LTS
 
-asdf install java adoptopenjdk-8.0.312+7
+asdf install ansible-base 2.10.17
+asdf local ansible-base 2.10.17
+asdf local temurin-21.0.8+9.0.LTS
+asdf global java adoptopenjdk-8.0.312+7
 asdf global java adoptopenjdk-8.0.312+7
 
 #eclipse temurin

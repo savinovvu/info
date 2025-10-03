@@ -1,0 +1,23 @@
+---
+
+# SystemD service setup
+
+- name: "Service | Create systemd service file"
+  template:
+    src: app.systemd.service.j2
+    dest: "{{ sysd_script }}"
+    mode: 0644
+    owner: "{{ service_user }}"
+    group: "{{  service_user_group }}"
+  when: use_system_d
+  become: true
+  notify:
+    - "Restart application"
+
+- name: "Service | Ensure {{  service_name }} service is started"
+  service:
+    name: "{{  service_name | lower }}"
+    enabled: yes
+    daemon_reload: yes
+    state: started
+  become: true

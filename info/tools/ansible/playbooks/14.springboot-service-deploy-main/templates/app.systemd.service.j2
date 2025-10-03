@@ -1,0 +1,13 @@
+# {{ ansible_managed }}
+[Unit]
+Description={{ service_name | upper }}
+After=network.target
+
+[Service]
+ExecStart=/bin/sh -c "exec java -Duser.timezone=EST -jar {{ service_root_folder }}/{{ service_name | upper }}/{{ service_name | upper }} --spring.config.location=file:{{ service_root_folder }}/{{ service_name | upper }}/application.yml"
+Restart=always
+WorkingDirectory= {{ service_root_folder }}/{{ service_name | upper }}
+SuccessExitStatus=143
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,27 @@
+---
+- name: Ansible Lesson 19
+  hosts: all
+  any_errors_fatal: true
+  become: yes
+
+  tasks:
+#    wrong task
+    - name: Task Number 1
+      yum: name=treeee state=latest
+      ignore_errors: yes
+
+    - name: Task number 2
+      shell: echo Hello world
+      register: results
+#      failed_when: "'world' in results.stdout"
+      failed_when: results.rc == 0
+
+    - name: Task number 3
+      shell: cat /home/vsavinov/nonexists
+      register: results
+
+    - debug:
+        var: results
+
+    - name: Task Number 3
+      shell: echo privet mir

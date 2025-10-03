@@ -1,0 +1,15 @@
+---
+# dependencies default var
+service_user: root
+service_user_group: root
+service_state: present
+service_extension: jar
+service_root_folder: /opt/microservices
+service_as_a_service: true
+service_stop_wait_time: 60
+service_config_file_final_name: application.yml
+service_healthcheck_urls_validate_certs: no
+service_healthcheck_urls_retry_count: 10
+service_healthcheck_urls_retry_delay: 6
+service_healthcheck_ports_timeout: 60
+service_env: []

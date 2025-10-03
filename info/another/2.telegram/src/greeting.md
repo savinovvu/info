@@ -1,10 +1,11 @@
 // эмодзи на месте
+/greeting
 
 Welcome $username, introduce yourself please!👋
 👨‍🎓Country, city, age, education, work, hobbies
 🗣The languages you speak
 📷 Can you share a photo of your area?
-There are rules and special resources in the group: @baikalvoiceRules
+Look at rules and special resources in the group: @baikalvoice
 Look at pinned messages📌
 
 

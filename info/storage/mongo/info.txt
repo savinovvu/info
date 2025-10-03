@@ -13,3 +13,7 @@
 # turn on autostart
 
  sudo systemctl enable mongodb
+
+        ==================================================
+
+sudo docker exec -it mongodb mongosh

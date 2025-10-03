@@ -1,0 +1,6 @@
+asdf install erlang erlang 25.2.3
+asdf install elixir elixir 1.14.3-otp-25
+
+
+asdf local erlang latest
+asdf local elixir latest

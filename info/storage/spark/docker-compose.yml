@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+  pyspark:
+    user: root
+    container_name: pyspark
+    image: jupyter/pyspark-notebook:latest
+    ports:
+      - "8888:8888"
+    volumes:
+      - /home/skorpion/tmp:/home/jovyan/work
+
+#  http://127.0.0.1:8888/lab?token=a3193bb4c04fa38d9daa600f874864431d2c009414965950

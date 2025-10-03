@@ -33,7 +33,9 @@ ansible all -m yum -a "name=stress state=latest" -b
 ansible all -m yum -a "name=stress state=remove" -b
 
 # start playbook
-ansible-playbook playbook1.yml
+ansible-playbook playbook.yml
+ansible-playbook -e "target=staging" playbook.yml
+ansible-playbook -e "target=production" playbook.yml
 
 
 #create role
